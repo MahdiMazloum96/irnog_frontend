@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+
+@theme {
+  --color-primary: oklch(0.145 0 0);
+  --color-secondary: oklch(0.705 0.213 47.604);
+
+  --animate-shimmer: shimmer 2s linear infinite;
+  @keyframes shimmer {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -200% 0;
+    }
+  }
+}
+.shinyButton {
+  @apply bg-transparent backdrop-blur-lg border-gray-300  uppercase hover:shadow-[0_4px_6px_rgba(255,255,255,0.5)]  inline-flex  animate-shimmer border bg-[linear-gradient(110deg,#ff8c00,45%,#ffb347,55%,#ff8c00)] bg-[length:200%_100%]  font-medium  transition-colors;
+}
