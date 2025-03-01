@@ -19,3 +19,27 @@
 .shinyButton {
   @apply bg-transparent backdrop-blur-lg border-gray-300  uppercase hover:shadow-[0_4px_6px_rgba(255,255,255,0.5)]  inline-flex  animate-shimmer border bg-[linear-gradient(110deg,#ff8c00,45%,#ffb347,55%,#ff8c00)] bg-[length:200%_100%]  font-medium  transition-colors;
 }
+
+@font-face {
+  font-family: "IranSans";
+  src: url("/public/fonts/IRANSansWeb.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Nastaligh";
+  src: url("/public/fonts/Nastaligh.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Soraya";
+  src: url("/public/fonts/Soraya.ttf") format("truetype");
+}
+
+@theme {
+  --font-Nastaligh: "Nastaligh";
+  --font-IranSans: "IranSanse";
+  --font-Soraya: "Soraya";
+}
+
+body {
+  @apply font-Soraya;
+}
