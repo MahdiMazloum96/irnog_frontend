@@ -3,6 +3,7 @@ import Menubar from "@/components/Menubar/Menubar";
 import { SidebarSheet } from "@/components/sidebarSheet/SidebarSheet";
 import logo from "@/public/logo/Logo.png";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 
 export default function StickyHeader() {
@@ -13,7 +14,7 @@ export default function StickyHeader() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
+  const router = useRouter();
   return (
     <header
       className={`sticky top-0 p-4 z-50 transition-all duration-300 ${
@@ -21,7 +22,7 @@ export default function StickyHeader() {
       }`}
     >
       <div className="flex justify-between items-center">
-        <div>
+        <div onClick={() => router.push("/")} className="cursor-pointer">
           <Image
             src={logo}
             alt="Logo"

@@ -25,8 +25,11 @@ const HomePage: React.FC = () => {
             تهیه بلیط
           </button>
 
-          <button className=" w-96 h-20 bg-transparent backdrop-blur-lg border border-gray-300 text-white py-2 px-4 rounded-4xl uppercase  hover:shadow-[0_4px_6px_rgba(255,255,255,0.5)] hover:cursor-pointer">
-            buy ticket
+          <button
+            className=" w-96 h-20 bg-transparent backdrop-blur-lg border border-gray-300 text-white py-2 px-4 rounded-4xl uppercase  hover:shadow-[0_4px_6px_rgba(255,255,255,0.5)] hover:cursor-pointer"
+            onClick={() => router.push("/cfp")}
+          >
+            هماهنگی برای ارائه
           </button>
         </div>
       </div>
