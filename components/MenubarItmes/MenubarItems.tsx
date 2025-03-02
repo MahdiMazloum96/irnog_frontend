@@ -1,16 +1,18 @@
+import { useRouter } from "next/navigation";
 import { FC } from "react";
 
 interface MenubarItemsProps {}
 
 const menubarItemsArray = [
-  "تهیه بلیط ",
-  "هماهنگی برای ارائه",
-  "شیوه نامه",
-  "همایش ها",
-  "راه های ارتباطی ایرناگ",
+  { name: "تهیه بلیط", link: "/buyTicket" },
+  { name: "هماهنگی برای ارائه", link: "/cfp" },
+  { name: "شیوه نامه", link: "/ticket" },
+  { name: "همایش ها", link: "/ticket" },
+  { name: "راه های ارتباطی ایرناگ", link: "/ticket" },
 ];
 
 const MenubarItems: FC<MenubarItemsProps> = () => {
+  const router = useRouter();
   return (
     <>
       {menubarItemsArray.map((item, index) => (
@@ -19,8 +21,9 @@ const MenubarItems: FC<MenubarItemsProps> = () => {
           className={`mx-2 uppercase text-white hover:text-secondary cursor-pointer ${
             index === 0 ? "text-secondary!  hover:text-white!  " : ""
           }`}
+          onClick={() => router.push(item.link)}
         >
-          {item}
+          {item.name}
         </div>
       ))}
     </>
