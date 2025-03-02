@@ -6,7 +6,7 @@ interface MenubarItemsProps {}
 const menubarItemsArray = [
   { name: "تهیه بلیط", link: "/buyTicket" },
   { name: "هماهنگی برای ارائه", link: "/cfp" },
-  { name: "شیوه نامه", link: "/ticket" },
+  { name: "شیوه نامه", link: "/rules" },
   { name: "همایش ها", link: "/ticket" },
   { name: "راه های ارتباطی ایرناگ", link: "/ticket" },
 ];

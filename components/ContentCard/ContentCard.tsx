@@ -5,7 +5,7 @@ interface ContentCardProps {}
 
 const ContentCard: React.FC<ContentCardProps> = () => {
   return (
-    <Card className="text-white w-5/6 lg:w-4/6 align-middle m-auto  backdrop-blur-sm bg-gradient-to-r from-orange-400/40 to-orange-600/40 border border-white/20 shadow-lg">
+    <Card className="text-white w-5/6 lg:w-4/6 align-middle m-auto  backdrop-blur-sm bg-gradient-to-r from-orange-400/40 to-orange-600/40 border border-white/20 shadow-lg my-8">
       <CardHeader className="flex justify-center items-center pt-4">
         <CardTitle>گروه گردانندگان شبکه اینترنت ایران (IRNOG)</CardTitle>
       </CardHeader>
