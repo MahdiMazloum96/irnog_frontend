@@ -1,5 +1,6 @@
 import { useRouter } from "next/navigation";
 import { FC } from "react";
+import ContactUs from "../ContactUs/ContactUs";
 
 interface MenubarItemsProps {
   setOpen?: (open: boolean) => void;
@@ -9,8 +10,7 @@ const menubarItemsArray = [
   { name: "تهیه بلیط", link: "/buyTicket" },
   { name: "هماهنگی برای ارائه", link: "/cfp" },
   { name: "شیوه نامه", link: "/rules" },
-  { name: "همایش ها", link: "/ticket" },
-  { name: "راه های ارتباطی ایرناگ", link: "/ticket" },
+  { name: "راه های ارتباطی ایرناگ", link: "ContactUs" },
 ];
 
 const MenubarItems: FC<MenubarItemsProps> = ({ setOpen }) => {
@@ -19,7 +19,11 @@ const MenubarItems: FC<MenubarItemsProps> = ({ setOpen }) => {
     if (setOpen) {
       setOpen(false);
     }
-    router.push(link);
+    if (link === "ContactUs") {
+      window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+    } else {
+      router.push(link);
+    }
   };
   return (
     <>

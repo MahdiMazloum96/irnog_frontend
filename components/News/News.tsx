@@ -4,14 +4,14 @@ import { FaArrowRight } from "react-icons/fa";
 const News: FC = () => {
   return (
     <div className="bg-gray-900 pb-10 ">
-      <div className="uppercase text-center text-white py-8 text-6xl">
+      <div className="uppercase text-center text-white py-8 text-6xl select-none">
         اخبار
       </div>
-      <div className="text-white flex justify-center items-center mb-10">
+      <div className="text-white flex flex-col gap-6 md:flex-row justify-center items-center mb-10">
         {newsContent.map((news, index) => (
           <div
             key={index}
-            className="w-1/6 flex flex-col gap-4   items-center h-[40rem] mx-4 pt-0 border border-white rounded-lg"
+            className="w-4/5 md:w-2/6 lg:w-1/6  flex flex-col gap-4  items-center h-[40rem]  pt-0 border border-white rounded-lg"
           >
             <div className="p-0 overflow-hidden">
               <img
