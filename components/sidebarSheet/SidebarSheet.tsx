@@ -1,4 +1,9 @@
-import { Sheet, SheetContent, SheetHeader } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+} from "@/components/ui/sheet";
 import Image from "next/image";
 import { FaBars } from "react-icons/fa";
 import logo from "@/public/logo/Logo.png";
@@ -24,14 +29,16 @@ export function SidebarSheet() {
 
         <SheetContent className=" flex flex-col backdrop-blur-sm  bg-transparent [&>button]:hidden">
           <SheetHeader className="flex justify-between items-center">
-            <Image
-              src={logo}
-              alt="Logo"
-              width={80}
-              height={50}
-              className="bg-secondary rounded-full p-2 cursor-pointer"
-              onClick={handleLogoClick}
-            />
+            <SheetTitle>
+              <Image
+                src={logo}
+                alt="Logo"
+                width={80}
+                height={50}
+                className="bg-secondary rounded-full p-2 cursor-pointer"
+                onClick={handleLogoClick}
+              />
+            </SheetTitle>
           </SheetHeader>
           <div className=" flex flex-col text-white justify-center items-end gap-10 pr-4 ">
             <MenubarItems setOpen={setOpen} />

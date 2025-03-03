@@ -2,7 +2,7 @@ import { useRouter } from "next/navigation";
 import { FC } from "react";
 
 interface MenubarItemsProps {
-  setOpen: (open: boolean) => void;
+  setOpen?: (open: boolean) => void;
 }
 
 const menubarItemsArray = [
@@ -16,7 +16,9 @@ const menubarItemsArray = [
 const MenubarItems: FC<MenubarItemsProps> = ({ setOpen }) => {
   const router = useRouter();
   const handleClick = (link: string) => {
-    setOpen(false);
+    if (setOpen) {
+      setOpen(false);
+    }
     router.push(link);
   };
   return (
