@@ -46,8 +46,8 @@ const BuyTicket: FC<BuyTicketProps> = () => {
 
   return (
     <div className="h-screen">
-      <Card className="w-4/5 md:w-3/5 lg:w-2/5 p-8 min-h-auto align-middle md:mx-auto mx-4 mt-16  backdrop-blur-sm bg-gradient-to-r from-orange-400/40 to-orange-600/40 border border-white/20 shadow-[0px_15px_60px_#eb9b3e] rounded-lg">
-        <h1 className="text-2xl text-white align-middle m-auto mt-5">
+      <Card className=" md:w-3/5 lg:w-2/5 p-8 h-auto align-middle md:mx-auto mx-4 mt-16  backdrop-blur-sm bg-gradient-to-r from-orange-400/40 to-orange-600/40 border border-white/20 shadow-[0px_15px_60px_#eb9b3e] rounded-lg">
+        <h1 className="text-2xl text-white align-middle m-auto mt-5 select-none">
           تهیه بلیط
         </h1>
         <Form {...form}>
@@ -55,8 +55,8 @@ const BuyTicket: FC<BuyTicketProps> = () => {
             onSubmit={form.handleSubmit(onSubmit)}
             className="space-y-12  my-5"
           >
-            {/** Username */}
-            <div className="flex flex-col md:flex-row  gap-4 w-full">
+            <div className="flex flex-col md:flex-row md:gap-4 gap-10 w-full">
+              {/** Username */}
               <FormField
                 control={form.control}
                 name="username"
@@ -91,40 +91,42 @@ const BuyTicket: FC<BuyTicketProps> = () => {
                 )}
               />
             </div>
-            {/** Phone */}
-            <FormField
-              control={form.control}
-              name="phone"
-              render={({ field }) => (
-                <FormItem>
-                  <FormControl>
-                    <Input
-                      placeholder="شماره تماس"
-                      {...field}
-                      className="text-right"
-                    />
-                  </FormControl>
-                  <FormMessage className="text-gray-300 text-right text-md" />
-                </FormItem>
-              )}
-            />
-            {/** Email */}
-            <FormField
-              control={form.control}
-              name="email"
-              render={({ field }) => (
-                <FormItem>
-                  <FormControl>
-                    <Input
-                      placeholder="ایمیل"
-                      {...field}
-                      className="text-right"
-                    />
-                  </FormControl>
-                  <FormMessage className="text-gray-300 text-right text-md" />
-                </FormItem>
-              )}
-            />
+            <div className="flex flex-col md:flex-row md:gap-4 gap-10 w-full">
+              {/** Phone */}
+              <FormField
+                control={form.control}
+                name="phone"
+                render={({ field }) => (
+                  <FormItem className="w-full">
+                    <FormControl>
+                      <Input
+                        placeholder="شماره تماس"
+                        {...field}
+                        className="text-right"
+                      />
+                    </FormControl>
+                    <FormMessage className="text-gray-300 text-right text-md" />
+                  </FormItem>
+                )}
+              />
+              {/** Email */}
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem className="w-full">
+                    <FormControl>
+                      <Input
+                        placeholder="ایمیل"
+                        {...field}
+                        className="text-right"
+                      />
+                    </FormControl>
+                    <FormMessage className="text-gray-300 text-right text-md" />
+                  </FormItem>
+                )}
+              />
+            </div>
             {/** Company (Optional) */}
             <FormField
               control={form.control}
@@ -143,7 +145,10 @@ const BuyTicket: FC<BuyTicketProps> = () => {
               )}
             />
 
-            <Button className="w-full bg-white text-black" type="submit">
+            <Button
+              className="w-4/5 bg-secondary text-white text-md align-middle mx-auto cursor-pointer hover:shadow-[0px_2px_3px_#FFFFFF] flex "
+              type="submit"
+            >
               ارسال
             </Button>
           </form>
