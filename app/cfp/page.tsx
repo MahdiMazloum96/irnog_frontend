@@ -204,7 +204,7 @@ const CfpPage: FC<CfpPageProps> = () => {
                 render={({ field: { onChange, ref, ...field } }) => (
                   <FormItem className="w-full ">
                     <FormControl>
-                      <>
+                      <div>
                         <Input
                           className="hidden"
                           id="file"
@@ -226,7 +226,7 @@ const CfpPage: FC<CfpPageProps> = () => {
                             فایل خود را بارگذاری کنید
                           </span>
                         </label>
-                      </>
+                      </div>
                     </FormControl>
                     <FormMessage className="text-white text-right text-md" />
                   </FormItem>
