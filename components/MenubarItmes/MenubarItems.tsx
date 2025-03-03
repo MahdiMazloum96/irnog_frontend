@@ -10,7 +10,7 @@ const menubarItemsArray = [
   { name: "تهیه بلیط", link: "/buyTicket" },
   { name: "هماهنگی برای ارائه", link: "/cfp" },
   { name: "شیوه نامه", link: "/rules" },
-  { name: "راه های ارتباطی ایرناگ", link: "ContactUs" },
+  { name: "راه های ارتباطی ایرناگ", link: "/" },
 ];
 
 const MenubarItems: FC<MenubarItemsProps> = ({ setOpen }) => {
@@ -19,8 +19,14 @@ const MenubarItems: FC<MenubarItemsProps> = ({ setOpen }) => {
     if (setOpen) {
       setOpen(false);
     }
-    if (link === "ContactUs") {
-      window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+    if (link === "/") {
+      setTimeout(() => {
+        window.scrollTo({
+          top: document.body.scrollHeight,
+          behavior: "smooth",
+        });
+      }, 500);
+      router.push(link);
     } else {
       router.push(link);
     }
