@@ -30,7 +30,7 @@ const socialLinks = [
 ];
 
 const SocialMediaIcons = () => {
-  const handleCLick = (link: string) => {
+  const handleClick = (link: string) => {
     window.open(link);
   };
   return (
@@ -40,7 +40,7 @@ const SocialMediaIcons = () => {
           key={id}
           className="relative group"
           onClick={() => {
-            handleCLick(link);
+            handleClick(link);
           }}
         >
           <a
