@@ -2,6 +2,8 @@ import { FC } from "react";
 import { Card } from "../ui/card";
 import SocialMediaIcons from "../SocialMediaIcons/SocialMediaIcons";
 import { ContactContent } from "./ContactContent";
+import ReactMarkdown from "react-markdown";
+
 interface ContactUsProps {}
 const ContactUs: FC<ContactUsProps> = () => {
   return (
@@ -9,12 +11,16 @@ const ContactUs: FC<ContactUsProps> = () => {
       <h1 className="uppercase lg:text-6xl text-4xl text-white font-extrabold text-center">
         contact us
       </h1>
-      <div className="grid md:grid-cols-4 sm:grid-cols-1 gap-5 my-10 mx-4">
+      <div className="flex md:flex-row flex-col gap-10 my-10 mx-4">
         {ContactContent.map((content) => {
           return (
-            <div className="text-white flex flex-col gap-8 items-center ">
-              <div className="text-xl">{content.title}</div>
-              <div className="text-right">{content.content}</div>
+            <div className=" md:w-1/4 flex flex-col gap-5 items-center ">
+              <div className="text-lg font-extrabold text-orange-950">
+                {content.title}
+              </div>
+              <div className="text-center text-white leading-8">
+                <ReactMarkdown>{content.content}</ReactMarkdown>
+              </div>
             </div>
           );
         })}
