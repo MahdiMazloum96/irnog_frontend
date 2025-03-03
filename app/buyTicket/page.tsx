@@ -45,7 +45,7 @@ const BuyTicket: FC<BuyTicketProps> = () => {
   }
 
   return (
-    <div className="h-screen">
+    <div className="h-auto min-h-screen mb-10">
       <Card className=" md:w-3/5 lg:w-2/5 p-8 h-auto align-middle md:mx-auto mx-4 mt-16  backdrop-blur-sm bg-gradient-to-r from-orange-400/40 to-orange-600/40 border border-white/20 shadow-[0px_15px_60px_#eb9b3e] rounded-lg">
         <h1 className="text-2xl text-white align-middle m-auto mt-5 select-none">
           تهیه بلیط
