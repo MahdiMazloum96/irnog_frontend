@@ -204,28 +204,30 @@ const CfpPage: FC<CfpPageProps> = () => {
                 render={({ field: { onChange, ref, ...field } }) => (
                   <FormItem className="w-full ">
                     <FormControl>
-                      <div>
-                        <Input
-                          className="hidden"
-                          id="file"
-                          type="file"
-                          onChange={(event) => {
-                            const file = event.target.files?.[0];
-                            if (file) {
-                              onChange(file);
-                            }
-                          }}
-                          ref={ref}
-                        />
-                        <label
-                          htmlFor="file"
-                          className=" bg-gray-200 px-4 py-2 rounded cursor-pointer text-gray-600 text-center h-28 w-full"
-                        >
-                          <Presentation size={24} />
-                          <span className="text-sm">
-                            فایل خود را بارگذاری کنید
-                          </span>
-                        </label>
+                      <div className="w-full flex flex-col items-center">
+                        <>
+                          <Input
+                            className="hidden"
+                            id="file"
+                            type="file"
+                            onChange={(event) => {
+                              const file = event.target.files?.[0];
+                              if (file) {
+                                onChange(file);
+                              }
+                            }}
+                            ref={ref}
+                          />
+                          <label
+                            htmlFor="file"
+                            className="bg-gray-200 px-4 py-2 rounded cursor-pointer text-gray-600 text-center h-28 w-full flex flex-col items-center justify-center gap-2"
+                          >
+                            <Presentation size={24} />
+                            <span className="text-sm">
+                              فایل خود را بارگذاری کنید
+                            </span>
+                          </label>
+                        </>
                       </div>
                     </FormControl>
                     <FormMessage className="text-white text-right text-md" />

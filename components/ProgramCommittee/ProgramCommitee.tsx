@@ -24,10 +24,10 @@ const ProgramCommittee: FC<ProgrmCommitteeProps> = () => {
                 className="rounded-2xl"
               />
               <div
-                className="flex gap-2 w-full h-14 items-center justify-center  cursor-pointer"
+                className="flex gap-2 w-full h-14 items-center justify-center  cursor-pointer p-3"
                 onClick={() => handleClick(member.linkdin)}
               >
-                <div className="text-white">{member.name}</div>
+                <div className="text-white text-center">{member.name}</div>
                 <FaLinkedin className="text-white" />
               </div>
             </div>

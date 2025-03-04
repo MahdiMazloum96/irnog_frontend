@@ -37,7 +37,7 @@ export const programCommitteeMembers: programCommitteeMembersProps[] = [
   },
   {
     name: "وحید شهبازیان",
-    image: "",
+    image: "/pics/SaeedSozangar.jpg",
     linkdin: "https://www.linkedin.com/in/vahid-shahbazian-fard-jahromy/",
   },
   {
