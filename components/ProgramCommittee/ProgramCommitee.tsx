@@ -3,6 +3,7 @@ import { FC } from "react";
 import { Card } from "../ui/card";
 import { programCommitteeMembers } from "./ProgramCommiteeMembers";
 import { FaLinkedin } from "react-icons/fa";
+import Image from "next/image";
 
 interface ProgrmCommitteeProps {}
 const ProgramCommittee: FC<ProgrmCommitteeProps> = () => {
@@ -18,7 +19,9 @@ const ProgramCommittee: FC<ProgrmCommitteeProps> = () => {
         {programCommitteeMembers.map((member) => {
           return (
             <div className="bg-gray-900 rounded-2xl" key={member.name}>
-              <img
+              <Image
+                width="600"
+                height="600"
                 src={member.image}
                 alt="MembersImage"
                 className="rounded-2xl"
