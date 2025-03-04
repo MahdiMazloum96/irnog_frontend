@@ -22,16 +22,16 @@
 
 @font-face {
   font-family: "IranSans";
-  src: url("/public/fonts/IRANSansWeb.ttf") format("truetype");
+  src: url("/fonts/IRANSansWeb.ttf") format("truetype");
 }
 @font-face {
   font-family: "Nastaligh";
-  src: url("/public/fonts/Nastaligh.ttf") format("truetype");
+  src: url("/fonts/Nastaligh.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Soraya";
-  src: url("/public/fonts/Soraya.ttf") format("truetype");
+  src: url("/fonts/Soraya.ttf") format("truetype");
 }
 
 @theme {
@@ -41,5 +41,5 @@
 }
 
 body {
-  @apply font-Soraya;
+  @apply font-IranSans;
 }
