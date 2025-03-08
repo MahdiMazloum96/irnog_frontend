@@ -20,17 +20,19 @@ const IrnogPage: FC<IrnogPageProps> = () => {
   return (
     <div className="h-auto">
       <>
-        <div>
+        <div className="flex flex-col items-center mt-14">
           {/* title */}
-          <h1 className="text-white h-24">
-            همایش رسمی گروه گردانندگان شبکه اینترنت ایران {page?.value.title}-
-            IRNOG{id}
+          <h1 className="text-white flex flex-col items-center gap-7 mx-2">
+            <div className="text-3xl lg:text-5xl text-center leading-20">
+              {page?.value.title} همایش رسمی گروه گردانندگان شبکه اینترنت ایران
+            </div>
+            <div className="text-4xl">IRNOG {id}</div>
           </h1>
           {/* location */}
 
-          <h1 className="text-white h-24">{page?.value.location.country}</h1>
-          <h1 className="text-white h-24">{page?.value.location.city}</h1>
-          <h1 className="text-white h-24">{page?.value.location.detail}</h1>
+          <h1 className="text-white ">{page?.value.location.country}</h1>
+          <h1 className="text-white ">{page?.value.location.city}</h1>
+          <h1 className="text-white ">{page?.value.location.detail}</h1>
           {page?.value.location.locationLink && (
             <button
               onClick={() =>

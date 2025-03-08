@@ -1,7 +1,7 @@
 import { IrnogEvent } from "../types";
 
 export const Irnog2: IrnogEvent = {
-  title: "اولین",
+  title: "دومین",
   location: {
     country: "ایران",
     city: "تهران",
