@@ -91,12 +91,14 @@ const IrnogPage: FC<IrnogPageProps> = () => {
                         </td>
                       )}
                       <td className="whitespace-nowrap p-3 border-t border-gray-200">
-                        <a
-                          href={irnogAgenda.presentationLink}
-                          className="text-white hover:text-secondary"
+                        <span
+                          onClick={() =>
+                            window.open(irnogAgenda.presentationLink)
+                          }
+                          className="text-white hover:text-secondary cursor-pointer"
                         >
                           مشاهده مستندات
-                        </a>
+                        </span>
                       </td>
                     </tr>
                   ))}
