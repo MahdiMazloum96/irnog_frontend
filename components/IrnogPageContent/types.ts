@@ -8,7 +8,8 @@ export interface Location {
 export interface Table {
   presenter: string;
   presentationTitle: string;
-  presentationLink: string;
+  presentationTime?: string;
+  presentationLink?: string;
 }
 
 export interface SponsorInfo {

@@ -4,6 +4,7 @@ import { useParams } from "next/navigation";
 import { FC } from "react";
 import { IrnogPageContent } from "@/components/IrnogPageContent/IrnogPageContent";
 import NotFoundPage from "@/app/not-found";
+import Link from "next/link";
 
 interface IrnogPageProps {}
 const IrnogPage: FC<IrnogPageProps> = () => {
@@ -46,16 +47,64 @@ const IrnogPage: FC<IrnogPageProps> = () => {
             </button>
           )}
           {/* irnog agenda */}
-          {page?.value.irnogAgenda &&
-            page.value.irnogAgenda.map((irnogAgenda) => {
-              return (
-                <div key={irnogAgenda.presenter} className="text-white">
-                  <div>{irnogAgenda.presenter}</div>
-                  <div>{irnogAgenda.presentationTitle}</div>
-                  <div>{irnogAgenda.presentationLink}</div>
-                </div>
-              );
-            })}
+          {page?.value.irnogAgenda && (
+            <div
+              dir="rtl"
+              className="overflow-x-auto  w-full  flex justify-center mt-28"
+            >
+              <table className="w-full lg:w-3/5 mx-2 backdrop-blur-sm bg-gradient-to-r from-orange-400/40 to-orange-600/40 shadow-md rounded-lg overflow-hidden">
+                <thead className="  bg-amber-700 text-white">
+                  <tr>
+                    <th className="text-center whitespace-nowrap p-3">
+                      شخص ارائه دهنده
+                    </th>
+                    <th className="text-center whitespace-nowrap p-3">
+                      عنوان ارائه
+                    </th>
+                    {page.value.irnogAgenda.some(
+                      (agenda) => agenda.presentationTime
+                    ) && (
+                      <th className="text-center whitespace-nowrap p-3">
+                        ساعت
+                      </th>
+                    )}
+                    <th className="text-center whitespace-nowrap p-3">
+                      مستندات
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {page.value.irnogAgenda.map((irnogAgenda) => (
+                    <tr
+                      key={irnogAgenda.presenter}
+                      className="hover:bg-orange-100/10 transition duration-150 ease-in-out text-center"
+                    >
+                      <td className="whitespace-nowrap p-3 border-t border-gray-200 max-w-24 truncate">
+                        {irnogAgenda.presenter}
+                      </td>
+                      <td className="whitespace-nowrap p-3 border-t max-w-40 border-gray-200 truncate">
+                        {irnogAgenda.presentationTitle}
+                      </td>
+                      {irnogAgenda.presentationTime && (
+                        <td className="whitespace-nowrap p-3 border-t border-gray-200">
+                          {irnogAgenda.presentationTime}
+                        </td>
+                      )}
+                      <td className="whitespace-nowrap p-3 border-t border-gray-200">
+                        <a
+                          href={irnogAgenda.presentationLink}
+                          className="text-white hover:text-secondary"
+                        >
+                          مشاهده مستندات
+                        </a>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+
           {/* sponsors */}
           {/* hostSponsors */}
           <h1 className="text-4xl text-white">sponser</h1>

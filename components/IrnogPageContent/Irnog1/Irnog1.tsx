@@ -12,17 +12,50 @@ export const Irnog1: IrnogEvent = {
   irnogAgenda: [
     {
       presenter: "مهدی",
-      presentationTitle: "ریاضی",
+      presentationTitle: "یاضی",
+      presentationTime: "10min",
       presentationLink: "youtube.com",
     },
     {
       presenter: "مهدی",
       presentationTitle: "ریاضی",
+      presentationTime: "10min",
       presentationLink: "youtube.com",
     },
     {
       presenter: "مهدی",
       presentationTitle: "ریاضی",
+      presentationTime: "10min",
+      presentationLink: "youtube.com",
+    },
+    {
+      presenter: "مهدی",
+      presentationTitle: "ریاضی",
+      presentationTime: "10min",
+      presentationLink: "youtube.com",
+    },
+    {
+      presenter: "مهدی",
+      presentationTitle: "ریاضی",
+      presentationTime: "10min",
+      presentationLink: "youtube.com",
+    },
+    {
+      presenter: "مهدی",
+      presentationTitle: "ریاضی",
+      presentationTime: "10min",
+      presentationLink: "youtube.com",
+    },
+    {
+      presenter: "مهدی",
+      presentationTitle: "ریاضی",
+      presentationTime: "10min",
+      presentationLink: "youtube.com",
+    },
+    {
+      presenter: "مهدی",
+      presentationTitle: "ریاضی",
+      presentationTime: "10min",
       presentationLink: "youtube.com",
     },
   ],
