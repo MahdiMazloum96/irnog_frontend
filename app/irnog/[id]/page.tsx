@@ -20,30 +20,29 @@ const IrnogPage: FC<IrnogPageProps> = () => {
   return (
     <div className="h-auto">
       <>
-        <div className="flex flex-col items-center mt-14">
+        <div className="flex flex-col gap-4 items-center mt-14 text-white">
           {/* title */}
-          <h1 className="text-white flex flex-col items-center gap-7 mx-2 my-6">
+          <h1 className=" flex flex-col items-center gap-7 mx-2 my-6">
             <div className="text-3xl lg:text-5xl text-center leading-20">
               {page?.value.title} همایش رسمی گروه گردانندگان شبکه اینترنت ایران
             </div>
             <div className="text-4xl">IRNOG {id}</div>
           </h1>
           {/* time */}
-          {page?.value.time && (
-            <div className="text-white">{page?.value.time}</div>
-          )}
+          {page?.value.time && <div>{page?.value.time}</div>}
           {/* location */}
-          <h1 className="text-white ">{page?.value.location.country}</h1>
-          <h1 className="text-white ">{page?.value.location.city}</h1>
-          <h1 className="text-white ">{page?.value.location.detail}</h1>
+          <div className="mt-2">
+            {page?.value.location.country} - {page?.value.location.city}
+          </div>
+          <div>{page?.value.location.detail}</div>
           {page?.value.location.locationLink && (
             <button
               onClick={() =>
                 handleOpenMapClick(page?.value.location.locationLink)
               }
-              className=" text-white  w-full"
+              className=" text-center font-bold  w-36 border border-white rounded-lg p-2 bg-[#ff8c00] cursor-pointer"
             >
-              google maps
+              Google Map
             </button>
           )}
           {/* irnog agenda */}
