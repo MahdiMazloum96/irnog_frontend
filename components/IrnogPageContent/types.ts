@@ -32,6 +32,7 @@ export interface Sponsors {
 
 export interface IrnogEvent {
   title: string;
+  time?: string;
   location: Location;
   irnogAgenda: Table[];
   sponsers: Sponsors;

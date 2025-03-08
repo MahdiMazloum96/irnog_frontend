@@ -2,6 +2,7 @@ import { IrnogEvent } from "../types";
 
 export const Irnog1: IrnogEvent = {
   title: "اولین",
+  time: `پنجشنبه - 14 تیر ماه 1403`,
   location: {
     country: "ایران",
     city: "تهران",

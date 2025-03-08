@@ -22,14 +22,17 @@ const IrnogPage: FC<IrnogPageProps> = () => {
       <>
         <div className="flex flex-col items-center mt-14">
           {/* title */}
-          <h1 className="text-white flex flex-col items-center gap-7 mx-2">
+          <h1 className="text-white flex flex-col items-center gap-7 mx-2 my-6">
             <div className="text-3xl lg:text-5xl text-center leading-20">
               {page?.value.title} همایش رسمی گروه گردانندگان شبکه اینترنت ایران
             </div>
             <div className="text-4xl">IRNOG {id}</div>
           </h1>
+          {/* time */}
+          {page?.value.time && (
+            <div className="text-white">{page?.value.time}</div>
+          )}
           {/* location */}
-
           <h1 className="text-white ">{page?.value.location.country}</h1>
           <h1 className="text-white ">{page?.value.location.city}</h1>
           <h1 className="text-white ">{page?.value.location.detail}</h1>
@@ -54,7 +57,6 @@ const IrnogPage: FC<IrnogPageProps> = () => {
                 </div>
               );
             })}
-
           {/* sponsors */}
           {/* hostSponsors */}
           <h1 className="text-4xl text-white">sponser</h1>
@@ -69,7 +71,6 @@ const IrnogPage: FC<IrnogPageProps> = () => {
           {/* silverSponsors */}
           {/* ConnectivitySponsors */}
           {/* moralSponsor */}
-
           {/* Participants */}
           {page?.value.Participants.map((Participant) => {
             return (
