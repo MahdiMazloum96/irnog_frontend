@@ -13,6 +13,7 @@ export interface Table {
 }
 
 export interface SponsorInfo {
+  name: string;
   logo: string;
   link: string;
 }
@@ -24,11 +25,11 @@ export interface Participants {
 
 export interface Sponsors {
   hostSponsors?: SponsorInfo;
-  platinumSponsors?: SponsorInfo;
-  goldSponsors?: SponsorInfo;
-  silverSponsors?: SponsorInfo;
-  ConnectivitySponsors?: SponsorInfo;
-  moralSponsor?: SponsorInfo;
+  platinumSponsors?: SponsorInfo[];
+  goldSponsors?: SponsorInfo[];
+  silverSponsors?: SponsorInfo[];
+  ConnectivitySponsors?: SponsorInfo[];
+  moralSponsor?: SponsorInfo[];
 }
 
 export interface IrnogEvent {

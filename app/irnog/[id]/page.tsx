@@ -109,18 +109,143 @@ const IrnogPage: FC<IrnogPageProps> = () => {
 
           {/* sponsors */}
           {/* hostSponsors */}
-          <h1 className="text-4xl text-white">sponser</h1>
-          {page?.value.sponsers && (
-            <div className="text-white bg-red-800">
-              <div>{page.value.sponsers.hostSponsors?.link}</div>
-              <div>{page.value.sponsers.hostSponsors?.logo}</div>
-            </div>
+          <h1 className="text-6xl text-white mt-20">حامیان همایش</h1>
+          {page?.value.sponsers.hostSponsors && (
+            <>
+              <h1 className="mt-10 text-xl select-none">حامی مالی میزبان</h1>
+              <div className="flex flex-wrap justify-center gap-4 mt-8">
+                <div
+                  key={page?.value.sponsers.hostSponsors.name}
+                  className="relative w-64 h-64 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
+                  onClick={() =>
+                    window.open(page?.value.sponsers.hostSponsors?.link)
+                  }
+                >
+                  <img
+                    src={page?.value.sponsers.hostSponsors.logo}
+                    alt={page?.value.sponsers.hostSponsors.name}
+                    className="object-cover w-full h-full transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-xs"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 px-4 py-2 text-center text-white bg-transparent backdrop-blur-sm bg-opacity-75">
+                    {page?.value.sponsers.hostSponsors.name}
+                  </div>
+                </div>
+              </div>
+            </>
           )}
           {/* platinumSponsors */}
+          {page?.value.sponsers.platinumSponsors && (
+            <>
+              <h1 className="mt-10 text-xl select-none">
+                حامیان مالی پلاتینیوم
+              </h1>
+
+              <div className="flex flex-wrap justify-center gap-4 mt-8">
+                {page.value.sponsers.platinumSponsors.map((sponsor) => (
+                  <div
+                    key={sponsor.name}
+                    className="relative w-64 h-64 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
+                    onClick={() => window.open(sponsor.link)}
+                  >
+                    <img
+                      src={sponsor.logo}
+                      alt={sponsor.name}
+                      className="object-cover w-full h-full transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-xs"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 px-4 py-2 text-center text-white bg-transparent backdrop-blur-sm bg-opacity-75">
+                      {sponsor.name}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
           {/* goldSponsors */}
+          {page?.value.sponsers.goldSponsors && (
+            <>
+              <div className="flex flex-wrap justify-center gap-4 mt-8">
+                {page.value.sponsers.goldSponsors.map((sponsor) => (
+                  <div
+                    key={sponsor.name}
+                    className="relative w-64 h-64 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
+                    onClick={() => window.open(sponsor.link)}
+                  >
+                    <img
+                      src={sponsor.logo}
+                      alt={sponsor.name}
+                      className="object-cover w-full h-full transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-xs"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 px-4 py-2 text-center text-white bg-transparent backdrop-blur-sm bg-opacity-75">
+                      {sponsor.name}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
           {/* silverSponsors */}
+          {page?.value.sponsers.silverSponsors && (
+            <div className="flex flex-wrap justify-center gap-4 mt-8">
+              {page.value.sponsers.silverSponsors.map((sponsor) => (
+                <div
+                  key={sponsor.name}
+                  className="relative w-64 h-64 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
+                  onClick={() => window.open(sponsor.link)}
+                >
+                  <img
+                    src={sponsor.logo}
+                    alt={sponsor.name}
+                    className="object-cover w-full h-full transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-xs"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 px-4 py-2 text-center text-white bg-transparent backdrop-blur-sm bg-opacity-75">
+                    {sponsor.name}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
           {/* ConnectivitySponsors */}
+          {page?.value.sponsers.ConnectivitySponsors && (
+            <div className="flex flex-wrap justify-center gap-4 mt-8">
+              {page.value.sponsers.ConnectivitySponsors.map((sponsor) => (
+                <div
+                  key={sponsor.name}
+                  className="relative w-64 h-64 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
+                  onClick={() => window.open(sponsor.link)}
+                >
+                  <img
+                    src={sponsor.logo}
+                    alt={sponsor.name}
+                    className="object-cover w-full h-full transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-xs"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 px-4 py-2 text-center text-white bg-transparent backdrop-blur-sm bg-opacity-75">
+                    {sponsor.name}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
           {/* moralSponsor */}
+          {page?.value.sponsers.moralSponsor && (
+            <div className="flex flex-wrap justify-center gap-4 mt-8">
+              {page.value.sponsers.moralSponsor.map((sponsor) => (
+                <div
+                  key={sponsor.name}
+                  className="relative w-64 h-64 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
+                  onClick={() => window.open(sponsor.link)}
+                >
+                  <img
+                    src={sponsor.logo}
+                    alt={sponsor.name}
+                    className="object-cover w-full h-full transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-xs"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 px-4 py-2 text-center text-white bg-transparent backdrop-blur-sm bg-opacity-75">
+                    {sponsor.name}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
           {/* Participants */}
           {page?.value.Participants.map((Participant) => {
             return (

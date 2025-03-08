@@ -61,9 +61,27 @@ export const Irnog1: IrnogEvent = {
   ],
   sponsers: {
     hostSponsors: {
-      logo: "عکس",
+      logo: "https://www.irnog.net/wp-content/uploads/2017/10/38.jpg",
       link: "google.com",
+      name: "google",
     },
+    platinumSponsors: [
+      {
+        logo: "https://www.irnog.net/wp-content/uploads/2017/10/38.jpg",
+        link: "google.com",
+        name: "google",
+      },
+      {
+        logo: "https://www.irnog.net/wp-content/uploads/2017/10/38.jpg",
+        link: "google.com",
+        name: "google",
+      },
+      {
+        logo: "https://www.irnog.net/wp-content/uploads/2017/10/38.jpg",
+        link: "google.com",
+        name: "google",
+      },
+    ],
   },
   Participants: [
     { name: "مهدی", company: "هوپاد" },
