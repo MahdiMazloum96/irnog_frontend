@@ -1,16 +1,4 @@
-interface Location {
-  country: string;
-  city: string;
-  detail: string;
-}
-
-interface IrnogEvent {
-  title: string;
-  location: Location;
-  irnogAgenda: string;
-  sponsers: string;
-  Participants: string;
-}
+import { IrnogEvent } from "../types";
 
 export const Irnog2: IrnogEvent = {
   title: "اولین",
@@ -18,8 +6,35 @@ export const Irnog2: IrnogEvent = {
     country: "ایران",
     city: "تهران",
     detail: "خیابان شریعتی، سالن کنفرانس پیام سوم ",
+    locationLink: "google.com",
   },
-  irnogAgenda: "FIRST",
-  sponsers: "hamrahaval",
-  Participants: "mahdi",
+  irnogAgenda: [
+    {
+      presenter: "مهدی",
+      presentationTitle: "ریاضی",
+      presentationLink: "youtube.com",
+    },
+    {
+      presenter: "مهدی",
+      presentationTitle: "ریاضی",
+      presentationLink: "youtube.com",
+    },
+    {
+      presenter: "مهدی",
+      presentationTitle: "ریاضی",
+      presentationLink: "youtube.com",
+    },
+  ],
+  sponsers: {
+    hostSponsors: {
+      logo: "عکس",
+      link: "google.com",
+    },
+  },
+  Participants: [
+    { name: "مهدی", company: "هوپاد" },
+    { name: "مهدی", company: "هوپاد" },
+    { name: "مهدی", company: "هوپاد" },
+    { name: "مهدی", company: "هوپاد" },
+  ],
 };
