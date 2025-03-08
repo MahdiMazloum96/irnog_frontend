@@ -35,7 +35,7 @@ export interface IrnogEvent {
   title: string;
   time?: string;
   location: Location;
-  irnogAgenda: Table[];
+  irnogAgenda?: Table[];
   sponsers: Sponsors;
   Participants: Participants[];
 }
