@@ -10,12 +10,12 @@ interface IrnogPageProps {}
 const IrnogPage: FC<IrnogPageProps> = () => {
   const params = useParams();
   const { id } = params;
-  const numeberId = Number(id);
   const page = IrnogPageContent.find((page) => page.key === id);
   const handleOpenMapClick = (link: string | undefined) => {
     window.open(link);
   };
-  if (numeberId < 1 || numeberId > 6) {
+  const allowedID = ["1", "2", "3", "4", "5", "6"];
+  if (!allowedID.includes(id as string)) {
     return <NotFoundPage />;
   }
   return (
