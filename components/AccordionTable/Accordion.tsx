@@ -2,11 +2,11 @@ import React, { FC, useState } from "react";
 import { Participants } from "../IrnogPageContent/types";
 import { FaArrowDown } from "react-icons/fa6";
 
-interface AccordionProps {
-  Participants: any;
+interface AccordionTableProps {
+  Participants: Participants[] | undefined;
 }
 
-const Accordion: FC<AccordionProps> = ({ Participants }) => {
+const AccordionTable: FC<AccordionTableProps> = ({ Participants }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleAccordion = () => {
@@ -14,7 +14,7 @@ const Accordion: FC<AccordionProps> = ({ Participants }) => {
   };
 
   return (
-    <div className="w-3/5 mx-aut mb-14 select-none">
+    <div className=" w-full lg:w-3/5 mx-aut mb-14 select-none">
       <div>
         <ul className="shadow-box">
           <li className="relative border-b border-gray-200">
@@ -55,22 +55,23 @@ const Accordion: FC<AccordionProps> = ({ Participants }) => {
                     </tr>
                   </thead>
                   <tbody>
-                    {Participants.map((Participants: any) => (
-                      <tr
-                        key={Participants.firstname}
-                        className="hover:bg-orange-100/10 transition duration-150 ease-in-out text-center"
-                      >
-                        <td className="whitespace-nowrap p-3 border-t border-gray-200 max-w-24 truncate">
-                          {Participants.firstname}
-                        </td>
-                        <td className="whitespace-nowrap p-3 border-t max-w-40 border-gray-200 truncate">
-                          {Participants.lastname}
-                        </td>
-                        <td className="whitespace-nowrap p-3 border-t border-gray-200">
-                          {Participants.company}
-                        </td>
-                      </tr>
-                    ))}
+                    {Participants &&
+                      Participants.map((participant: Participants) => (
+                        <tr
+                          key={participant.firstname}
+                          className="hover:bg-orange-100/10 transition duration-150 ease-in-out text-center"
+                        >
+                          <td className="whitespace-nowrap p-3 border-t border-gray-200 max-w-24 truncate">
+                            {participant.firstname}
+                          </td>
+                          <td className="whitespace-nowrap p-3 border-t max-w-40 border-gray-200 truncate">
+                            {participant.lastname}
+                          </td>
+                          <td className="whitespace-nowrap p-3 border-t border-gray-200">
+                            {participant.company}
+                          </td>
+                        </tr>
+                      ))}
                   </tbody>
                 </table>
               </div>
@@ -82,4 +83,4 @@ const Accordion: FC<AccordionProps> = ({ Participants }) => {
   );
 };
 
-export default Accordion;
+export default AccordionTable;

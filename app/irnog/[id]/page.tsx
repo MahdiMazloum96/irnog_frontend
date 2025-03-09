@@ -4,7 +4,7 @@ import { useParams } from "next/navigation";
 import { FC } from "react";
 import { IrnogPageContent } from "@/components/IrnogPageContent/IrnogPageContent";
 import NotFoundPage from "@/app/not-found";
-import Accordion from "@/components/Accordion/Accordion";
+import Accordion from "@/components/AccordionTable/Accordion";
 
 interface IrnogPageProps {}
 const IrnogPage: FC<IrnogPageProps> = () => {
@@ -269,15 +269,6 @@ const IrnogPage: FC<IrnogPageProps> = () => {
               </>
             )}
           </div>
-          {/* Participants */}
-          {/* {page?.value.Participants.map((Participant) => {
-            return (
-              <div key={Participant.name} className="text-white">
-                <div>{Participant.name}</div>
-                <div>{Participant.company}</div>
-              </div>
-            );
-          })} */}
           <Accordion Participants={page?.value.Participants} />
         </div>
       </>
