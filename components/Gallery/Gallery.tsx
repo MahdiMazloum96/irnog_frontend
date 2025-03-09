@@ -8,9 +8,9 @@ const Gallery: FC<GalleryProps> = () => {
         Gallery
       </h1>
       <div className="grid  sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-1.5 mx-16">
-        {GalleryPictures.map((pic) => {
+        {GalleryPictures.map((pic, index) => {
           return (
-            <div>
+            <div key={index}>
               <img src={pic.picture} alt="pic" className="rounded-lg" />
             </div>
           );

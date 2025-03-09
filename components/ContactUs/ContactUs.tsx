@@ -12,9 +12,12 @@ const ContactUs: FC<ContactUsProps> = () => {
         contact us
       </h1>
       <div className="flex md:flex-row flex-col gap-10 my-10 mx-4">
-        {ContactContent.map((content) => {
+        {ContactContent.map((content, index) => {
           return (
-            <div className=" md:w-1/4 flex flex-col gap-5 items-center ">
+            <div
+              className=" md:w-1/4 flex flex-col gap-5 items-center "
+              key={index}
+            >
               <div className="text-lg font-extrabold text-orange-950 select-none">
                 {content.title}
               </div>

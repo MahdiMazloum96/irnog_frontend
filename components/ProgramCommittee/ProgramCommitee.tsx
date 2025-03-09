@@ -16,9 +16,9 @@ const ProgramCommittee: FC<ProgrmCommitteeProps> = () => {
         Program Committee
       </h1>
       <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-4 mx-8 my-16">
-        {programCommitteeMembers.map((member) => {
+        {programCommitteeMembers.map((member, index) => {
           return (
-            <div className="bg-gray-900 rounded-2xl" key={member.name}>
+            <div className="bg-gray-900 rounded-2xl" key={index}>
               <Image
                 width="600"
                 height="600"

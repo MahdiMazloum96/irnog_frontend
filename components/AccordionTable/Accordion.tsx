@@ -56,9 +56,9 @@ const AccordionTable: FC<AccordionTableProps> = ({ Participants }) => {
                   </thead>
                   <tbody>
                     {Participants &&
-                      Participants.map((participant: Participants) => (
+                      Participants.map((participant: Participants, index) => (
                         <tr
-                          key={participant.firstname}
+                          key={index}
                           className="hover:bg-orange-100/10 transition duration-150 ease-in-out text-center"
                         >
                           <td className="whitespace-nowrap p-3 border-t border-gray-200 max-w-24 truncate">

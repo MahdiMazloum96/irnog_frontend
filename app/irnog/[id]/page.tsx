@@ -74,9 +74,9 @@ const IrnogPage: FC<IrnogPageProps> = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {page.value.irnogAgenda.map((irnogAgenda) => (
+                  {page.value.irnogAgenda.map((irnogAgenda, index) => (
                     <tr
-                      key={irnogAgenda.presenter}
+                      key={index}
                       className="hover:bg-orange-100/10 transition duration-150 ease-in-out text-center"
                     >
                       <td className="whitespace-nowrap p-3 border-t border-gray-200 max-w-24 truncate">
@@ -120,7 +120,6 @@ const IrnogPage: FC<IrnogPageProps> = () => {
                 </h1>
                 <div className="flex flex-wrap justify-center gap-4 mt-8">
                   <div
-                    key={page?.value.sponsers.hostSponsors.name}
                     className="relative w-64 h-64 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
                     onClick={() =>
                       window.open(page?.value.sponsers.hostSponsors?.link)
@@ -146,22 +145,24 @@ const IrnogPage: FC<IrnogPageProps> = () => {
                 </h1>
 
                 <div className="flex flex-wrap justify-center gap-4 mt-8">
-                  {page.value.sponsers.platinumSponsors.map((sponsor) => (
-                    <div
-                      key={sponsor.name}
-                      className="relative w-64 h-64 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
-                      onClick={() => window.open(sponsor.link)}
-                    >
-                      <img
-                        src={sponsor.logo}
-                        alt={sponsor.name}
-                        className="object-cover w-full h-full transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-xs"
-                      />
-                      <div className="absolute bottom-0 left-0 right-0 px-4 py-2 text-center text-white bg-transparent backdrop-blur-sm bg-opacity-75">
-                        {sponsor.name}
+                  {page.value.sponsers.platinumSponsors.map(
+                    (sponsor, index) => (
+                      <div
+                        key={index}
+                        className="relative w-64 h-64 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
+                        onClick={() => window.open(sponsor.link)}
+                      >
+                        <img
+                          src={sponsor.logo}
+                          alt={sponsor.name}
+                          className="object-cover w-full h-full transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-xs"
+                        />
+                        <div className="absolute bottom-0 left-0 right-0 px-4 py-2 text-center text-white bg-transparent backdrop-blur-sm bg-opacity-75">
+                          {sponsor.name}
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    )
+                  )}
                 </div>
               </>
             )}
@@ -172,9 +173,9 @@ const IrnogPage: FC<IrnogPageProps> = () => {
                   حامیان مالی طلایی
                 </h1>
                 <div className="flex flex-wrap justify-center gap-4 mt-8">
-                  {page.value.sponsers.goldSponsors.map((sponsor) => (
+                  {page.value.sponsers.goldSponsors.map((sponsor, index) => (
                     <div
-                      key={sponsor.name}
+                      key={index}
                       className="relative w-64 h-64 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
                       onClick={() => window.open(sponsor.link)}
                     >
@@ -199,9 +200,9 @@ const IrnogPage: FC<IrnogPageProps> = () => {
                 </h1>
 
                 <div className="flex flex-wrap justify-center gap-4 mt-8">
-                  {page.value.sponsers.silverSponsors.map((sponsor) => (
+                  {page.value.sponsers.silverSponsors.map((sponsor, index) => (
                     <div
-                      key={sponsor.name}
+                      key={index}
                       className="relative w-64 h-64 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
                       onClick={() => window.open(sponsor.link)}
                     >
@@ -225,22 +226,24 @@ const IrnogPage: FC<IrnogPageProps> = () => {
                   Connectivity حامیان
                 </h1>
                 <div className="flex flex-wrap justify-center gap-4 mt-8">
-                  {page.value.sponsers.ConnectivitySponsors.map((sponsor) => (
-                    <div
-                      key={sponsor.name}
-                      className="relative w-64 h-64 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
-                      onClick={() => window.open(sponsor.link)}
-                    >
-                      <img
-                        src={sponsor.logo}
-                        alt={sponsor.name}
-                        className="object-cover w-full h-full transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-xs"
-                      />
-                      <div className="absolute bottom-0 left-0 right-0 px-4 py-2 text-center text-white bg-transparent backdrop-blur-sm bg-opacity-75">
-                        {sponsor.name}
+                  {page.value.sponsers.ConnectivitySponsors.map(
+                    (sponsor, index) => (
+                      <div
+                        key={index}
+                        className="relative w-64 h-64 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
+                        onClick={() => window.open(sponsor.link)}
+                      >
+                        <img
+                          src={sponsor.logo}
+                          alt={sponsor.name}
+                          className="object-cover w-full h-full transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-xs"
+                        />
+                        <div className="absolute bottom-0 left-0 right-0 px-4 py-2 text-center text-white bg-transparent backdrop-blur-sm bg-opacity-75">
+                          {sponsor.name}
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    )
+                  )}
                 </div>
               </>
             )}
@@ -249,9 +252,9 @@ const IrnogPage: FC<IrnogPageProps> = () => {
               <>
                 <h1 className="mt-20 text-2xl select-none">حامی معنوی</h1>
                 <div className="flex flex-wrap justify-center gap-4 mt-8">
-                  {page.value.sponsers.moralSponsor.map((sponsor) => (
+                  {page.value.sponsers.moralSponsor.map((sponsor, index) => (
                     <div
-                      key={sponsor.name}
+                      key={index}
                       className="relative w-64 h-64 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
                       onClick={() => window.open(sponsor.link)}
                     >
@@ -274,9 +277,9 @@ const IrnogPage: FC<IrnogPageProps> = () => {
             <>
               <h1 className="text-white text-3xl text-center mt-12">گالری</h1>
               <div className="flex flex-wrap justify-center gap-4 mt-8">
-                {page.value.gallery.map((image) => (
+                {page.value.gallery.map((image, index) => (
                   <img
-                    key={image.image}
+                    key={index}
                     src={image.image}
                     width={400}
                     height={400}
