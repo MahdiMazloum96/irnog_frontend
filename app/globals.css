@@ -33,13 +33,29 @@
   font-family: "Soraya";
   src: url("/fonts/Soraya.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Nazanin";
+  src: url("/fonts/Far_Nazanin.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Vazir";
+  src: url("/font/Vazir.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Sahel";
+  src: url("/font/Sahel.ttf") format("truetype");
+}
 
 @theme {
   --font-Nastaligh: "Nastaligh";
   --font-IranSans: "IranSanse";
   --font-Soraya: "Soraya";
+  --font-Nazanin: "Nazanin";
+  --font-Vazir: "Vazir";
+  --font-Sahel: "Sahel";
 }
 
 body {
-  @apply font-IranSans;
+  @apply font-Sahel;
 }
