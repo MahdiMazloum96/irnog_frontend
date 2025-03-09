@@ -19,7 +19,8 @@ export interface SponsorInfo {
 }
 
 export interface Participants {
-  name: string;
+  firstname: string;
+  lastname: string;
   company?: string;
 }
 

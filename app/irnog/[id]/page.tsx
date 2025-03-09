@@ -4,7 +4,7 @@ import { useParams } from "next/navigation";
 import { FC } from "react";
 import { IrnogPageContent } from "@/components/IrnogPageContent/IrnogPageContent";
 import NotFoundPage from "@/app/not-found";
-import Link from "next/link";
+import Accordion from "@/components/Accordion/Accordion";
 
 interface IrnogPageProps {}
 const IrnogPage: FC<IrnogPageProps> = () => {
@@ -108,168 +108,177 @@ const IrnogPage: FC<IrnogPageProps> = () => {
           )}
 
           {/* sponsors */}
-          {/* hostSponsors */}
-          <h1 className="text-6xl text-white mt-20">حامیان همایش</h1>
-          {page?.value.sponsers.hostSponsors && (
-            <>
-              <h1 className="mt-10 text-2xl select-none">حامی مالی میزبان</h1>
-              <div className="flex flex-wrap justify-center gap-4 mt-8">
-                <div
-                  key={page?.value.sponsers.hostSponsors.name}
-                  className="relative w-64 h-64 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
-                  onClick={() =>
-                    window.open(page?.value.sponsers.hostSponsors?.link)
-                  }
-                >
-                  <img
-                    src={page?.value.sponsers.hostSponsors.logo}
-                    alt={page?.value.sponsers.hostSponsors.name}
-                    className="object-cover w-full h-full transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-xs"
-                  />
-                  <div className="absolute bottom-0 left-0 right-0 px-4 py-2 text-center text-white bg-transparent backdrop-blur-sm bg-opacity-75">
-                    {page?.value.sponsers.hostSponsors.name}
+          <div className=" h-auto w-5/6 bg-gradient-to-b from-black via-orange-600 to-black flex flex-col items-center px-4 my-10">
+            <h1 className="text-6xl text-center text-white my-16">
+              حامیان همایش
+            </h1>
+            {/* hostSponsors */}
+            {page?.value.sponsers.hostSponsors && (
+              <>
+                <h1 className="mt-20 text-2xl select-none ">
+                  حامی مالی میزبان
+                </h1>
+                <div className="flex flex-wrap justify-center gap-4 mt-8">
+                  <div
+                    key={page?.value.sponsers.hostSponsors.name}
+                    className="relative w-64 h-64 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
+                    onClick={() =>
+                      window.open(page?.value.sponsers.hostSponsors?.link)
+                    }
+                  >
+                    <img
+                      src={page?.value.sponsers.hostSponsors.logo}
+                      alt={page?.value.sponsers.hostSponsors.name}
+                      className="object-cover w-full h-full transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-xs"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 px-4 py-2 text-center text-white bg-transparent backdrop-blur-sm bg-opacity-75">
+                      {page?.value.sponsers.hostSponsors.name}
+                    </div>
                   </div>
                 </div>
-              </div>
-            </>
-          )}
-          {/* platinumSponsors */}
-          {page?.value.sponsers.platinumSponsors && (
-            <>
-              <h1 className="mt-10 text-2xl select-none">
-                حامیان مالی پلاتینیوم
-              </h1>
+              </>
+            )}
+            {/* platinumSponsors */}
+            {page?.value.sponsers.platinumSponsors && (
+              <>
+                <h1 className="mt-20 text-2xl select-none">
+                  حامیان مالی پلاتینیوم
+                </h1>
 
-              <div className="flex flex-wrap justify-center gap-4 mt-8">
-                {page.value.sponsers.platinumSponsors.map((sponsor) => (
-                  <div
-                    key={sponsor.name}
-                    className="relative w-64 h-64 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
-                    onClick={() => window.open(sponsor.link)}
-                  >
-                    <img
-                      src={sponsor.logo}
-                      alt={sponsor.name}
-                      className="object-cover w-full h-full transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-xs"
-                    />
-                    <div className="absolute bottom-0 left-0 right-0 px-4 py-2 text-center text-white bg-transparent backdrop-blur-sm bg-opacity-75">
-                      {sponsor.name}
+                <div className="flex flex-wrap justify-center gap-4 mt-8">
+                  {page.value.sponsers.platinumSponsors.map((sponsor) => (
+                    <div
+                      key={sponsor.name}
+                      className="relative w-64 h-64 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
+                      onClick={() => window.open(sponsor.link)}
+                    >
+                      <img
+                        src={sponsor.logo}
+                        alt={sponsor.name}
+                        className="object-cover w-full h-full transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-xs"
+                      />
+                      <div className="absolute bottom-0 left-0 right-0 px-4 py-2 text-center text-white bg-transparent backdrop-blur-sm bg-opacity-75">
+                        {sponsor.name}
+                      </div>
                     </div>
-                  </div>
-                ))}
-              </div>
-            </>
-          )}
-          {/* goldSponsors */}
-          {page?.value.sponsers.goldSponsors && (
-            <>
-              <h1 className="mt-10 text-2xl select-none">حامیان مالی طلایی</h1>
-              <div className="flex flex-wrap justify-center gap-4 mt-8">
-                {page.value.sponsers.goldSponsors.map((sponsor) => (
-                  <div
-                    key={sponsor.name}
-                    className="relative w-64 h-64 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
-                    onClick={() => window.open(sponsor.link)}
-                  >
-                    <img
-                      src={sponsor.logo}
-                      alt={sponsor.name}
-                      className="object-cover w-full h-full transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-xs"
-                    />
-                    <div className="absolute bottom-0 left-0 right-0 px-4 py-2 text-center text-white bg-transparent backdrop-blur-sm bg-opacity-75">
-                      {sponsor.name}
+                  ))}
+                </div>
+              </>
+            )}
+            {/* goldSponsors */}
+            {page?.value.sponsers.goldSponsors && (
+              <>
+                <h1 className="mt-20 text-2xl select-none">
+                  حامیان مالی طلایی
+                </h1>
+                <div className="flex flex-wrap justify-center gap-4 mt-8">
+                  {page.value.sponsers.goldSponsors.map((sponsor) => (
+                    <div
+                      key={sponsor.name}
+                      className="relative w-64 h-64 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
+                      onClick={() => window.open(sponsor.link)}
+                    >
+                      <img
+                        src={sponsor.logo}
+                        alt={sponsor.name}
+                        className="object-cover w-full h-full transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-xs"
+                      />
+                      <div className="absolute bottom-0 left-0 right-0 px-4 py-2 text-center text-white bg-transparent backdrop-blur-sm bg-opacity-75">
+                        {sponsor.name}
+                      </div>
                     </div>
-                  </div>
-                ))}
-              </div>
-            </>
-          )}
-          {/* silverSponsors */}
-          {page?.value.sponsers.silverSponsors && (
-            <>
-              <h1 className="mt-10 text-2xl select-none">
-                حامیان مالی نقره ای
-              </h1>
+                  ))}
+                </div>
+              </>
+            )}
+            {/* silverSponsors */}
+            {page?.value.sponsers.silverSponsors && (
+              <>
+                <h1 className="mt-20 text-2xl select-none">
+                  حامیان مالی نقره ای
+                </h1>
 
-              <div className="flex flex-wrap justify-center gap-4 mt-8">
-                {page.value.sponsers.silverSponsors.map((sponsor) => (
-                  <div
-                    key={sponsor.name}
-                    className="relative w-64 h-64 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
-                    onClick={() => window.open(sponsor.link)}
-                  >
-                    <img
-                      src={sponsor.logo}
-                      alt={sponsor.name}
-                      className="object-cover w-full h-full transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-xs"
-                    />
-                    <div className="absolute bottom-0 left-0 right-0 px-4 py-2 text-center text-white bg-transparent backdrop-blur-sm bg-opacity-75">
-                      {sponsor.name}
+                <div className="flex flex-wrap justify-center gap-4 mt-8">
+                  {page.value.sponsers.silverSponsors.map((sponsor) => (
+                    <div
+                      key={sponsor.name}
+                      className="relative w-64 h-64 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
+                      onClick={() => window.open(sponsor.link)}
+                    >
+                      <img
+                        src={sponsor.logo}
+                        alt={sponsor.name}
+                        className="object-cover w-full h-full transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-xs"
+                      />
+                      <div className="absolute bottom-0 left-0 right-0 px-4 py-2 text-center text-white bg-transparent backdrop-blur-sm bg-opacity-75">
+                        {sponsor.name}
+                      </div>
                     </div>
-                  </div>
-                ))}
-              </div>
-            </>
-          )}
-          {/* ConnectivitySponsors */}
-          {page?.value.sponsers.ConnectivitySponsors && (
-            <>
-              <h1 className="mt-10 text-2xl select-none">
-                Connectivity حامیان
-              </h1>
-              <div className="flex flex-wrap justify-center gap-4 mt-8">
-                {page.value.sponsers.ConnectivitySponsors.map((sponsor) => (
-                  <div
-                    key={sponsor.name}
-                    className="relative w-64 h-64 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
-                    onClick={() => window.open(sponsor.link)}
-                  >
-                    <img
-                      src={sponsor.logo}
-                      alt={sponsor.name}
-                      className="object-cover w-full h-full transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-xs"
-                    />
-                    <div className="absolute bottom-0 left-0 right-0 px-4 py-2 text-center text-white bg-transparent backdrop-blur-sm bg-opacity-75">
-                      {sponsor.name}
+                  ))}
+                </div>
+              </>
+            )}
+            {/* ConnectivitySponsors */}
+            {page?.value.sponsers.ConnectivitySponsors && (
+              <>
+                <h1 className="mt-20 text-2xl select-none">
+                  Connectivity حامیان
+                </h1>
+                <div className="flex flex-wrap justify-center gap-4 mt-8">
+                  {page.value.sponsers.ConnectivitySponsors.map((sponsor) => (
+                    <div
+                      key={sponsor.name}
+                      className="relative w-64 h-64 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
+                      onClick={() => window.open(sponsor.link)}
+                    >
+                      <img
+                        src={sponsor.logo}
+                        alt={sponsor.name}
+                        className="object-cover w-full h-full transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-xs"
+                      />
+                      <div className="absolute bottom-0 left-0 right-0 px-4 py-2 text-center text-white bg-transparent backdrop-blur-sm bg-opacity-75">
+                        {sponsor.name}
+                      </div>
                     </div>
-                  </div>
-                ))}
-              </div>
-            </>
-          )}
-          {/* moralSponsor */}
-          {page?.value.sponsers.moralSponsor && (
-            <>
-              <h1 className="mt-10 text-2xl select-none">حامی معنوی</h1>
-              <div className="flex flex-wrap justify-center gap-4 mt-8">
-                {page.value.sponsers.moralSponsor.map((sponsor) => (
-                  <div
-                    key={sponsor.name}
-                    className="relative w-64 h-64 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
-                    onClick={() => window.open(sponsor.link)}
-                  >
-                    <img
-                      src={sponsor.logo}
-                      alt={sponsor.name}
-                      className="object-cover w-full h-full transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-xs"
-                    />
-                    <div className="absolute bottom-0 left-0 right-0 px-4 py-2 text-center text-white bg-transparent backdrop-blur-sm bg-opacity-75">
-                      {sponsor.name}
+                  ))}
+                </div>
+              </>
+            )}
+            {/* moralSponsor */}
+            {page?.value.sponsers.moralSponsor && (
+              <>
+                <h1 className="mt-20 text-2xl select-none">حامی معنوی</h1>
+                <div className="flex flex-wrap justify-center gap-4 mt-8">
+                  {page.value.sponsers.moralSponsor.map((sponsor) => (
+                    <div
+                      key={sponsor.name}
+                      className="relative w-64 h-64 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
+                      onClick={() => window.open(sponsor.link)}
+                    >
+                      <img
+                        src={sponsor.logo}
+                        alt={sponsor.name}
+                        className="object-cover w-full h-full transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-xs"
+                      />
+                      <div className="absolute bottom-0 left-0 right-0 px-4 py-2 text-center text-white bg-transparent backdrop-blur-sm bg-opacity-75">
+                        {sponsor.name}
+                      </div>
                     </div>
-                  </div>
-                ))}
-              </div>
-            </>
-          )}
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
           {/* Participants */}
-          {page?.value.Participants.map((Participant) => {
+          {/* {page?.value.Participants.map((Participant) => {
             return (
               <div key={Participant.name} className="text-white">
                 <div>{Participant.name}</div>
                 <div>{Participant.company}</div>
               </div>
             );
-          })}
+          })} */}
+          <Accordion Participants={page?.value.Participants} />
         </div>
       </>
     </div>
