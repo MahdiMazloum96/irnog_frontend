@@ -82,6 +82,64 @@ export const Irnog1: IrnogEvent = {
         name: "google",
       },
     ],
+    goldSponsors: [
+      {
+        logo: "https://www.irnog.net/wp-content/uploads/2017/10/38.jpg",
+        link: "google.com",
+        name: "google",
+      },
+      {
+        logo: "https://www.irnog.net/wp-content/uploads/2017/10/38.jpg",
+        link: "google.com",
+        name: "google",
+      },
+      {
+        logo: "https://www.irnog.net/wp-content/uploads/2017/10/38.jpg",
+        link: "google.com",
+        name: "google",
+      },
+      {
+        logo: "https://www.irnog.net/wp-content/uploads/2017/10/38.jpg",
+        link: "google.com",
+        name: "google",
+      },
+      {
+        logo: "https://www.irnog.net/wp-content/uploads/2017/10/38.jpg",
+        link: "google.com",
+        name: "google",
+      },
+      {
+        logo: "https://www.irnog.net/wp-content/uploads/2017/10/38.jpg",
+        link: "google.com",
+        name: "google",
+      },
+    ],
+    silverSponsors: [
+      {
+        logo: "https://www.irnog.net/wp-content/uploads/2017/10/38.jpg",
+        link: "google.com",
+        name: "google",
+      },
+      {
+        logo: "https://www.irnog.net/wp-content/uploads/2017/10/38.jpg",
+        link: "google.com",
+        name: "google",
+      },
+    ],
+    ConnectivitySponsors: [
+      {
+        logo: "https://www.irnog.net/wp-content/uploads/2017/10/38.jpg",
+        link: "google.com",
+        name: "google",
+      },
+    ],
+    moralSponsor: [
+      {
+        logo: "https://www.irnog.net/wp-content/uploads/2017/10/38.jpg",
+        link: "google.com",
+        name: "google",
+      },
+    ],
   },
   Participants: [
     { name: "مهدی", company: "هوپاد" },
