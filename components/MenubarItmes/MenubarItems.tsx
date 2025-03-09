@@ -21,6 +21,15 @@ const menubarItemsArray = [
   { name: "همایش ها", link: "/" },
 ];
 
+const eventItemsArray = [
+  { name: "ایرناگ ۱", link: "/irnog/1" },
+  { name: "ایرناگ ۲", link: "/irnog/2" },
+  { name: "ایرناگ ۳", link: "/irnog/3" },
+  { name: "ایرناگ ۴	", link: "/irnog/4" },
+  { name: "ایرناگ ۵", link: "/irnog/5" },
+  { name: "ایرناگ ۶", link: "/irnog/6" },
+];
+
 const MenubarItems: FC<MenubarItemsProps> = ({ setOpen }) => {
   const router = useRouter();
 
@@ -41,7 +50,12 @@ const MenubarItems: FC<MenubarItemsProps> = ({ setOpen }) => {
       router.push(link);
     }
   };
-
+  const handleIrnogPageClick = (link: string) => {
+    if (setOpen) {
+      setOpen(false);
+    }
+    router.push(link);
+  };
   return (
     <>
       {menubarItemsArray.map((item, index) => (
@@ -53,11 +67,15 @@ const MenubarItems: FC<MenubarItemsProps> = ({ setOpen }) => {
                   <NavigationMenuTrigger className="text-white ">
                     {item.name}
                   </NavigationMenuTrigger>
-                  <NavigationMenuContent className="bg-white text-primary">
-                    <p>irnog</p>
-                    <p>irnog</p>
-                    <p>irnog</p>
-                    <p>irnog</p>
+                  <NavigationMenuContent className="bg-secondary text-primary w-24! text-center">
+                    {eventItemsArray.map((item) => (
+                      <div
+                        className="border-b border-white p-1 cursor-pointer hover:text-white"
+                        onClick={() => handleIrnogPageClick(item.link)}
+                      >
+                        {item.name}
+                      </div>
+                    ))}
                   </NavigationMenuContent>
                 </>
               ) : (
