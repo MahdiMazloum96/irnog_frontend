@@ -276,6 +276,7 @@ const IrnogPage: FC<IrnogPageProps> = () => {
               <div className="flex flex-wrap justify-center gap-4 mt-8">
                 {page.value.gallery.map((image) => (
                   <img
+                    key={image.image}
                     src={image.image}
                     width={400}
                     height={400}
