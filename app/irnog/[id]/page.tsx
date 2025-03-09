@@ -269,6 +269,24 @@ const IrnogPage: FC<IrnogPageProps> = () => {
               </>
             )}
           </div>
+          {/* gallery */}
+          {page?.value.gallery && (
+            <>
+              <h1 className="text-white text-3xl text-center mt-12">گالری</h1>
+              <div className="flex flex-wrap justify-center gap-4 mt-8">
+                {page.value.gallery.map((image) => (
+                  <img
+                    src={image.image}
+                    width={400}
+                    height={400}
+                    alt="gallery"
+                    className="rounded-lg"
+                  />
+                ))}
+              </div>
+            </>
+          )}
+          {/* Participants */}
           <Accordion Participants={page?.value.Participants} />
         </div>
       </>

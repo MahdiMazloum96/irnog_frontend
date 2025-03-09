@@ -33,11 +33,16 @@ export interface Sponsors {
   moralSponsor?: SponsorInfo[];
 }
 
+export interface gallery {
+  image: string;
+}
+
 export interface IrnogEvent {
   title: string;
   time?: string;
   location: Location;
   irnogAgenda?: Table[];
   sponsers: Sponsors;
+  gallery?: gallery[];
   Participants: Participants[];
 }
