@@ -8,7 +8,7 @@ const ContentCard: React.FC<ContentCardProps> = () => {
     <Card className="text-white w-5/6 lg:w-4/6 align-middle m-auto  backdrop-blur-sm bg-gradient-to-r from-orange-400/40 to-orange-600/40 border border-white/20 shadow-lg my-8">
       <CardHeader className="flex justify-center items-center text-center pt-4 select-none ">
         <CardTitle className="leading-relaxed">
-          گروه گردانندگان شبکه اینترنت ایران (IRNOG)
+          گروه گردانندگان شبکه اینترنت ایران
         </CardTitle>
       </CardHeader>
       <CardContent className="flex justify-start lg:text-base/10 text-right select-none  text-sm">

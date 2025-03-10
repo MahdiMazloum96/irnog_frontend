@@ -1,5 +1,3 @@
-"use client";
-
 import StickyHeader from "@/components/Header/StickyHeader";
 import "./globals.css";
 import AnimatedWallpaper from "@/components/AnimatedWallpaper/AnimatedWallpaper";
