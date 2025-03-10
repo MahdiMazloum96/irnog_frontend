@@ -68,10 +68,11 @@ const MenubarItems: FC<MenubarItemsProps> = ({ setOpen }) => {
                     {item.name}
                   </NavigationMenuTrigger>
                   <NavigationMenuContent className="bg-secondary text-primary w-24! text-center">
-                    {eventItemsArray.map((item) => (
+                    {eventItemsArray.map((item, index) => (
                       <div
                         className="border-b border-white p-1 cursor-pointer hover:text-white"
                         onClick={() => handleIrnogPageClick(item.link)}
+                        key={index}
                       >
                         {item.name}
                       </div>
