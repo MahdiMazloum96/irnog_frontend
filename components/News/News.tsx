@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { newsContent } from "./NewsContent";
 import { FaArrowRight } from "react-icons/fa";
+import Image from "next/image";
 const News: FC = () => {
   return (
     <div className="bg-gray-900 pb-10 ">
@@ -14,17 +15,19 @@ const News: FC = () => {
             className="w-4/5 md:w-2/6 lg:w-1/6  flex flex-col gap-4  items-center h-[40rem]  pt-0 border border-white rounded-lg"
           >
             <div className="p-0 overflow-hidden">
-              <img
-                src={news.image}
+              <Image
+                src={news.value.image}
+                width={400}
+                height={400}
                 alt="news"
                 className="w-fit  rounded-lg h-72"
               />
               <div className="text-center p-3 font-bold text-2xl hover:text-secondary hover:cursor-pointer h-28">
-                {news.title}
+                {news.value.title}
               </div>
             </div>
-            <div className="line-clamp-4 px-3 text-sm   rtl:text-right mb-3">
-              {news.content}
+            <div className=" px-3 text-sm text-right mb-3 h-24">
+              {news.value.contentSummary}
             </div>
 
             {/* Button */}
