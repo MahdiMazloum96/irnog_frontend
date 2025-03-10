@@ -3,6 +3,7 @@ interface NewsItem {
   content: string;
   contentSummary: string;
   image: string;
+  link: string;
 }
 // NewsItem[]
 
@@ -25,6 +26,7 @@ export const newsContent: { key: string; value: NewsItem }[] = [
 به گزارش خبرگزاری مهر، با حکم محمدجواد آذری جهرمی، سیروس موثقی ... 
     `,
       image: "/pics/01.jpg",
+      link: "/news/1",
     },
   },
   {
@@ -46,6 +48,7 @@ export const newsContent: { key: string; value: NewsItem }[] = [
     ...
     `,
       image: "/pics/02.jpg",
+      link: "/news/2",
     },
   },
 ];
