@@ -5,8 +5,7 @@ import { programCommitteeMembers } from "./ProgramCommiteeMembers";
 import { FaLinkedin } from "react-icons/fa";
 import Image from "next/image";
 
-interface ProgrmCommitteeProps {}
-const ProgramCommittee: FC<ProgrmCommitteeProps> = () => {
+const ProgramCommittee: FC = () => {
   const handleClick = (link: string) => {
     window.open(link);
   };

@@ -7,9 +7,7 @@ import {
   CardTitle,
 } from "../ui/card";
 
-interface TicketProps {}
-
-const Ticket: FC<TicketProps> = () => {
+const Ticket: FC = () => {
   return (
     <div className=" bg-gradient-to-br from-black via-black to-orange-500 w-full flex flex-col items-center justify-center gap-4 mt-24">
       <h1 className="uppercase select-none align-middle text-white font-bold text-6xl lg:my-24">

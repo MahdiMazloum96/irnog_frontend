@@ -6,8 +6,7 @@ import { IrnogPageContent } from "@/components/IrnogPageContent/IrnogPageContent
 import NotFoundPage from "@/app/not-found";
 import Accordion from "@/components/AccordionTable/Accordion";
 
-interface IrnogPageProps {}
-const IrnogPage: FC<IrnogPageProps> = () => {
+const IrnogPage: FC = () => {
   const params = useParams();
   const { id } = params;
   const page = IrnogPageContent.find((page) => page.key === id);

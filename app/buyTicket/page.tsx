@@ -27,8 +27,7 @@ const FormSchema = z.object({
   company: z.string().optional(),
 });
 
-interface BuyTicketProps {}
-const BuyTicket: FC<BuyTicketProps> = () => {
+const BuyTicket: FC = () => {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {

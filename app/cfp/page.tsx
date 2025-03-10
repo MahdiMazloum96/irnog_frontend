@@ -40,8 +40,7 @@ const FormSchema = z.object({
   description: z.string().optional(),
 });
 
-interface CfpPageProps {}
-const CfpPage: FC<CfpPageProps> = () => {
+const CfpPage: FC = () => {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
