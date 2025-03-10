@@ -4,7 +4,7 @@ import Gallery from "@/components/Gallery/Gallery";
 import HomePage from "@/components/HomePage/HomePage";
 import News from "@/components/News/News";
 import ProgramCommittee from "@/components/ProgramCommittee/ProgramCommitee";
-import { Ticket } from "lucide-react";
+import Ticket from "@/components/Ticket/Ticket";
 import React from "react";
 
 const MainPage: React.FC = () => {
@@ -12,9 +12,9 @@ const MainPage: React.FC = () => {
     <div>
       <HomePage />
       <ContentCard />
+      <ProgramCommittee />
       <Ticket />
       <News />
-      <ProgramCommittee />
       <Gallery />
       <ContactUs />
     </div>
