@@ -36,8 +36,11 @@ const News: FC = () => {
                 {news.value.title}
               </div>
             </div>
-            <div className=" px-3 text-sm text-right mb-3 h-24">
-              {news.value.contentSummary}
+            <div
+              className="px-3 text-sm text-right mb-3 h-24 overflow-hidden"
+              dir="rtl"
+            >
+              {news.value.contentSummary}...
             </div>
 
             {/* Button */}
