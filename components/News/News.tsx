@@ -11,7 +11,7 @@ const News: FC = () => {
     router.push(link);
   };
   return (
-    <div className="bg-gray-900 pb-10 ">
+    <div className="bg-gray-900 pb-10  ">
       <div className="uppercase text-center text-white py-8 text-6xl select-none">
         اخبار
       </div>
@@ -27,7 +27,7 @@ const News: FC = () => {
                 width={400}
                 height={400}
                 alt="news"
-                className="w-fit  rounded-lg h-72"
+                className="w-fit  rounded-lg "
               />
               <div
                 className="text-center p-3 font-bold text-2xl hover:text-secondary hover:cursor-pointer h-28"
@@ -37,7 +37,7 @@ const News: FC = () => {
               </div>
             </div>
             <div
-              className="px-3 text-sm text-right mb-3 h-24 overflow-hidden"
+              className="px-3 text-sm text-right mb-3 h-auto overflow-hidden"
               dir="rtl"
             >
               {news.value.contentSummary}...
