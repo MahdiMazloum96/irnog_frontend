@@ -49,7 +49,7 @@ const IrnogPage: FC = () => {
           {page?.value.irnogAgenda && (
             <div
               dir="rtl"
-              className="overflow-x-auto  w-full  flex justify-center mt-28"
+              className="overflow-x-auto   text-xs md:text-lg w-full  flex justify-center mt-28"
             >
               <table className="w-full lg:w-3/5 mx-2 backdrop-blur-sm bg-gradient-to-r from-orange-400/40 to-orange-600/40 shadow-md rounded-lg overflow-hidden">
                 <thead className="  bg-amber-700 text-white">
@@ -275,7 +275,7 @@ const IrnogPage: FC = () => {
           {page?.value.gallery && (
             <>
               <h1 className="text-white text-3xl text-center mt-12">گالری</h1>
-              <div className="flex flex-wrap justify-center gap-4 mt-8">
+              <div className="flex flex-wrap justify-center gap-4 mx-2 mt-8">
                 {page.value.gallery.map((image, index) => (
                   <img
                     key={index}

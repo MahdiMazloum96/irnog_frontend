@@ -14,7 +14,7 @@ const AccordionTable: FC<AccordionTableProps> = ({ Participants }) => {
   };
 
   return (
-    <div className=" w-full lg:w-3/5 mx-aut mb-14 select-none">
+    <div className=" w-full text-xs md:text-lg lg:w-3/5 mx-aut mb-14 select-none">
       <div>
         <ul className="shadow-box">
           <li className="relative border-b border-gray-200">
