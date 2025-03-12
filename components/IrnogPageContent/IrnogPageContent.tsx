@@ -6,4 +6,7 @@ export const IrnogPageContent = [
   { key: "1", value: Irnog1 },
   { key: "2", value: Irnog2 },
   { key: "3", value: Irnog3 },
+  { key: "4", value: Irnog1 },
+  { key: "5", value: Irnog2 },
+  { key: "6", value: Irnog3 },
 ];
