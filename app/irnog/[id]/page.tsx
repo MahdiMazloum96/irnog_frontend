@@ -6,6 +6,7 @@ import { IrnogPageContent } from "@/components/IrnogPageContent/IrnogPageContent
 import NotFoundPage from "@/app/not-found";
 import Accordion from "@/components/AccordionTable/Accordion";
 import Image from "next/image";
+import defaultImage from "../../../public/pics/defaultIMage/default.png";
 
 const IrnogPage: FC = () => {
   const params = useParams();
@@ -126,9 +127,16 @@ const IrnogPage: FC = () => {
                         window.open(page?.value.sponsers?.hostSponsors?.link)
                       }
                     >
-                      <img
-                        src={page?.value.sponsers.hostSponsors.logo}
+                      <Image
+                        src={
+                          page?.value.sponsers.hostSponsors.logo &&
+                          page.value.sponsers.hostSponsors.logo !== ""
+                            ? page.value.sponsers.hostSponsors.logo
+                            : defaultImage
+                        }
                         alt={page?.value.sponsers.hostSponsors.name}
+                        width={400}
+                        height={400}
                         className="object-cover w-full h-full transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-xs"
                       />
                       <div className=" absolute bottom-0 left-0 right-0 px-4 py-2 text-center text-black bg-transparent backdrop-blur-sm bg-opacity-75">
@@ -150,12 +158,18 @@ const IrnogPage: FC = () => {
                       (sponsor, index) => (
                         <div
                           key={index}
-                          className="relative w-64 h-64 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
+                          className="relative w-80 h-40 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
                           onClick={() => window.open(sponsor.link)}
                         >
-                          <img
-                            src={sponsor.logo}
+                          <Image
+                            src={
+                              sponsor.logo && sponsor.logo !== ""
+                                ? sponsor.logo
+                                : defaultImage
+                            }
                             alt={sponsor.name}
+                            width={400}
+                            height={400}
                             className="object-cover w-full h-full transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-xs"
                           />
                           <div className="absolute bottom-0 left-0 right-0 px-4 py-2 text-center text-black bg-transparent backdrop-blur-sm bg-opacity-75">
@@ -177,12 +191,18 @@ const IrnogPage: FC = () => {
                     {page.value.sponsers.goldSponsors.map((sponsor, index) => (
                       <div
                         key={index}
-                        className="relative w-64 h-64 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
+                        className="relative w-80 h-40 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
                         onClick={() => window.open(sponsor.link)}
                       >
-                        <img
-                          src={sponsor.logo}
+                        <Image
+                          src={
+                            sponsor.logo && sponsor.logo !== ""
+                              ? sponsor.logo
+                              : defaultImage
+                          }
                           alt={sponsor.name}
+                          width={400}
+                          height={400}
                           className="object-cover w-full h-full transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-xs"
                         />
                         <div className="absolute bottom-0 left-0 right-0 px-4 py-2 text-center text-black bg-transparent backdrop-blur-sm bg-opacity-75">
@@ -205,12 +225,18 @@ const IrnogPage: FC = () => {
                       (sponsor, index) => (
                         <div
                           key={index}
-                          className="relative w-64 h-64 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
+                          className="relative w-80 h-40 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
                           onClick={() => window.open(sponsor.link)}
                         >
-                          <img
-                            src={sponsor.logo}
+                          <Image
+                            src={
+                              sponsor.logo && sponsor.logo !== ""
+                                ? sponsor.logo
+                                : defaultImage
+                            }
                             alt={sponsor.name}
+                            width={400}
+                            height={400}
                             className="object-cover w-full h-full transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-xs"
                           />
                           <div className="absolute bottom-0 left-0 right-0 px-4 py-2 text-center text-black bg-transparent backdrop-blur-sm bg-opacity-75">
@@ -233,12 +259,18 @@ const IrnogPage: FC = () => {
                       (sponsor, index) => (
                         <div
                           key={index}
-                          className="relative w-64 h-64 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
+                          className="relative w-80 h-40 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
                           onClick={() => window.open(sponsor.link)}
                         >
-                          <img
-                            src={sponsor.logo}
+                          <Image
+                            src={
+                              sponsor.logo && sponsor.logo !== ""
+                                ? sponsor.logo
+                                : defaultImage
+                            }
                             alt={sponsor.name}
+                            width={400}
+                            height={400}
                             className="object-cover w-full h-full transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-xs"
                           />
                           <div className="absolute bottom-0 left-0 right-0 px-4 py-2 text-center text-black bg-transparent backdrop-blur-sm bg-opacity-75">
@@ -258,12 +290,18 @@ const IrnogPage: FC = () => {
                     {page.value.sponsers.moralSponsor.map((sponsor, index) => (
                       <div
                         key={index}
-                        className="relative w-64 h-64 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
+                        className="relative w-80 h-40 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
                         onClick={() => window.open(sponsor.link)}
                       >
-                        <img
-                          src={sponsor.logo}
+                        <Image
+                          src={
+                            sponsor.logo && sponsor.logo !== ""
+                              ? sponsor.logo
+                              : defaultImage
+                          }
                           alt={sponsor.name}
+                          width={400}
+                          height={400}
                           className="object-cover w-full h-full transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-xs"
                         />
                         <div className="absolute bottom-0 left-0 right-0 px-4 py-2 text-center text-black bg-transparent backdrop-blur-sm bg-opacity-75">
