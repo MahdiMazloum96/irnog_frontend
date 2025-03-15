@@ -11,7 +11,7 @@ const ProgramCommittee: FC = () => {
   };
   return (
     <Card className="  flex flex-col mx-auto items-center w-3/4 h-full bg-secondary my-10 overflow-hidden mt-36">
-      <h1 className="uppercase text-center text-white  text-3xl lg:text-6xl pt-16 select-none leading-relaxed">
+      <h1 className="uppercase text-center text-white  text-2xl lg:text-6xl pt-16 select-none leading-relaxed">
         اعضای کمیته برنامه ریزی مرکزی ایرناگ
       </h1>
       <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-4 mx-8 my-16">
