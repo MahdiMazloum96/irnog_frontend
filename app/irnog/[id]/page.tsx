@@ -36,7 +36,7 @@ const IrnogPage: FC = () => {
           <div className="mt-2">
             {page?.value.location.country} - {page?.value.location.city}
           </div>
-          <div>{page?.value.location.detail}</div>
+          <div className="text-center">{page?.value.location.detail}</div>
           {page?.value.location.locationLink && (
             <button
               onClick={() =>
@@ -110,7 +110,7 @@ const IrnogPage: FC = () => {
 
           {/* sponsors */}
           {page?.value.sponsers && (
-            <div className=" h-auto w-5/6 bg-gradient-to-b from-black via-orange-600 to-black flex flex-col items-center px-4 my-10">
+            <div className=" h-auto w-5/6 bg-gradient-to-b from-black via-orange-600 to-black flex flex-col items-center px-4 py-16 my-10 rounded-3xl">
               <h1 className="text-6xl text-center text-white my-16">
                 حامیان همایش
               </h1>
@@ -137,7 +137,7 @@ const IrnogPage: FC = () => {
                         alt={page?.value.sponsers.hostSponsors.name}
                         width={400}
                         height={400}
-                        className="object-cover w-full h-full transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-xs"
+                        className="bg-white  w-full h-full transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-xs"
                       />
                       <div className=" absolute bottom-0 left-0 right-0 px-4 py-2 text-center text-black bg-transparent backdrop-blur-sm bg-opacity-75">
                         {page?.value.sponsers.hostSponsors.name}
@@ -158,7 +158,7 @@ const IrnogPage: FC = () => {
                       (sponsor, index) => (
                         <div
                           key={index}
-                          className="relative w-80 h-40 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
+                          className="relative w-72 h-40 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
                           onClick={() => window.open(sponsor.link)}
                         >
                           <Image
@@ -170,7 +170,7 @@ const IrnogPage: FC = () => {
                             alt={sponsor.name}
                             width={400}
                             height={400}
-                            className="object-cover w-full h-full transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-xs"
+                            className=" bg-white  w-full h-full transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-xs"
                           />
                           <div className="absolute bottom-0 left-0 right-0 px-4 py-2 text-center text-black bg-transparent backdrop-blur-sm bg-opacity-75">
                             {sponsor.name}
@@ -203,7 +203,7 @@ const IrnogPage: FC = () => {
                           alt={sponsor.name}
                           width={400}
                           height={400}
-                          className="object-cover w-full h-full transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-xs"
+                          className=" bg-white  w-full h-full transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-xs"
                         />
                         <div className="absolute bottom-0 left-0 right-0 px-4 py-2 text-center text-black bg-transparent backdrop-blur-sm bg-opacity-75">
                           {sponsor.name}
@@ -237,7 +237,7 @@ const IrnogPage: FC = () => {
                             alt={sponsor.name}
                             width={400}
                             height={400}
-                            className="object-cover w-full h-full transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-xs"
+                            className=" bg-white  w-full h-full transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-xs"
                           />
                           <div className="absolute bottom-0 left-0 right-0 px-4 py-2 text-center text-black bg-transparent backdrop-blur-sm bg-opacity-75">
                             {sponsor.name}
@@ -271,7 +271,7 @@ const IrnogPage: FC = () => {
                             alt={sponsor.name}
                             width={400}
                             height={400}
-                            className="object-cover w-full h-full transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-xs"
+                            className=" bg-white  w-full h-full transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-xs"
                           />
                           <div className="absolute bottom-0 left-0 right-0 px-4 py-2 text-center text-black bg-transparent backdrop-blur-sm bg-opacity-75">
                             {sponsor.name}
@@ -302,7 +302,7 @@ const IrnogPage: FC = () => {
                           alt={sponsor.name}
                           width={400}
                           height={400}
-                          className="object-cover w-full h-full transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-xs"
+                          className=" bg-white object-cover w-full h-full transition-all duration-300 ease-in-out transform group-hover:scale-110 group-hover:blur-xs"
                         />
                         <div className="absolute bottom-0 left-0 right-0 px-4 py-2 text-center text-black bg-transparent backdrop-blur-sm bg-opacity-75">
                           {sponsor.name}
