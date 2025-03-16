@@ -72,10 +72,17 @@ const IrnogPage: FC = () => {
                     <th className="text-center whitespace-nowrap p-3">
                       مستندات
                     </th>
+                    {page.value.irnogAgenda.some(
+                      (agenda) => agenda.presentationFile
+                    ) && (
+                      <th className="text-center whitespace-nowrap p-3">
+                        فایل
+                      </th>
+                    )}
                   </tr>
                 </thead>
                 <tbody>
-                  {page.value.irnogAgenda.map((irnogAgenda, index) => (
+                  {page.value.irnogAgenda.map((irnogAgenda) => (
                     <tr
                       key={irnogAgenda.presentationTitle}
                       className="hover:bg-orange-100/10 transition duration-150 ease-in-out text-center"
@@ -101,6 +108,25 @@ const IrnogPage: FC = () => {
                           مشاهده مستندات
                         </span>
                       </td>
+                      {irnogAgenda.presentationFile && (
+                        <td className="whitespace-nowrap p-3 border-t border-gray-200">
+                          <span
+                            onClick={() => {
+                              if (irnogAgenda.presentationFile) {
+                                window.open(
+                                  irnogAgenda.presentationFile,
+                                  "_blank"
+                                );
+                              }
+                            }}
+                            className="text-white hover:text-secondary cursor-pointer"
+                          >
+                            {irnogAgenda.presentationFile === "#"
+                              ? "_"
+                              : "فایل"}
+                          </span>
+                        </td>
+                      )}
                     </tr>
                   ))}
                 </tbody>
