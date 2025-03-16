@@ -77,7 +77,7 @@ const IrnogPage: FC = () => {
                 <tbody>
                   {page.value.irnogAgenda.map((irnogAgenda, index) => (
                     <tr
-                      key={index}
+                      key={irnogAgenda.presentationTitle}
                       className="hover:bg-orange-100/10 transition duration-150 ease-in-out text-center"
                     >
                       <td className="whitespace-nowrap p-3 border-t border-gray-200 max-w-24 truncate">
@@ -157,7 +157,7 @@ const IrnogPage: FC = () => {
                     {page.value.sponsers.platinumSponsors.map(
                       (sponsor, index) => (
                         <div
-                          key={index}
+                          key={sponsor.link}
                           className="relative w-72 h-40 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
                           onClick={() => window.open(sponsor.link)}
                         >
@@ -190,7 +190,7 @@ const IrnogPage: FC = () => {
                   <div className="flex flex-wrap justify-center gap-4 mt-8">
                     {page.value.sponsers.goldSponsors.map((sponsor, index) => (
                       <div
-                        key={index}
+                        key={sponsor.link}
                         className="relative w-80 h-40 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
                         onClick={() => window.open(sponsor.link)}
                       >
@@ -224,7 +224,7 @@ const IrnogPage: FC = () => {
                     {page.value.sponsers.silverSponsors.map(
                       (sponsor, index) => (
                         <div
-                          key={index}
+                          key={sponsor.link}
                           className="relative w-80 h-40 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
                           onClick={() => window.open(sponsor.link)}
                         >
@@ -258,7 +258,7 @@ const IrnogPage: FC = () => {
                     {page.value.sponsers.ConnectivitySponsors.map(
                       (sponsor, index) => (
                         <div
-                          key={index}
+                          key={sponsor.link}
                           className="relative w-80 h-40 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
                           onClick={() => window.open(sponsor.link)}
                         >
@@ -289,7 +289,7 @@ const IrnogPage: FC = () => {
                   <div className="flex flex-wrap justify-center gap-4 mt-8">
                     {page.value.sponsers.moralSponsor.map((sponsor, index) => (
                       <div
-                        key={index}
+                        key={sponsor.link}
                         className="relative w-80 h-40 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
                         onClick={() => window.open(sponsor.link)}
                       >
@@ -321,7 +321,7 @@ const IrnogPage: FC = () => {
               <div className="flex flex-wrap justify-center gap-4 mx-2 mt-8">
                 {page.value.gallery.map((image, index) => (
                   <Image
-                    key={index}
+                    key={image.image}
                     src={image.image}
                     width={400}
                     height={400}
