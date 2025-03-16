@@ -90,7 +90,7 @@ export const Irnog6: IrnogEvent = {
         name: "razhman",
       },
       {
-        logo: "/logo/sponsers/irnog6/limoHost.jpg",
+        logo: "/logo/sponsers/irnog6/limoHost.svg",
         link: "https://limoo.host/",
         name: "limo Host",
       },
