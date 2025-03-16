@@ -80,7 +80,7 @@ export const Irnog6: IrnogEvent = {
   sponsers: {
     platinumSponsors: [
       {
-        logo: "/logo/sponsers/irnog6/tci.png",
+        logo: "/logo/sponsers/irnog6/tci.svg",
         link: "https://www.tci.ir/",
         name: "مخابرات",
       },
