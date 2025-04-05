@@ -51,31 +51,31 @@ const IrnogPage: FC = () => {
           {page?.value.irnogAgenda && (
             <div
               dir="rtl"
-              className="overflow-x-auto   text-xs md:text-lg w-full  flex justify-center mt-28"
+              className="overflow-x-auto text-xs md:text-lg  w-full  flex justify-center mt-28 "
             >
               <table className="w-full lg:w-3/5 mx-2 backdrop-blur-sm bg-gradient-to-r from-orange-400/40 to-orange-600/40 shadow-md rounded-lg overflow-hidden">
                 <thead className="  bg-amber-700 text-white">
                   <tr>
-                    <th className="text-center whitespace-nowrap p-3">
+                    <th className="text-center whitespace-nowrap p-3 pr-16 md:pr-0">
                       شخص ارائه دهنده
                     </th>
-                    <th className="text-center whitespace-nowrap p-3">
+                    <th className="text-center whitespace-nowrap p-3 ">
                       عنوان ارائه
                     </th>
                     {page.value.irnogAgenda.some(
                       (agenda) => agenda.presentationTime
                     ) && (
-                      <th className="text-center whitespace-nowrap p-3">
+                      <th className="text-center whitespace-nowrap p-3 ">
                         ساعت
                       </th>
                     )}
-                    <th className="text-center whitespace-nowrap p-3">
+                    <th className="text-center whitespace-nowrap p-3 ">
                       مستندات
                     </th>
                     {page.value.irnogAgenda.some(
                       (agenda) => agenda.presentationFile
                     ) && (
-                      <th className="text-center whitespace-nowrap p-3">
+                      <th className="text-center whitespace-nowrap p-3 ">
                         فایل
                       </th>
                     )}
@@ -87,7 +87,7 @@ const IrnogPage: FC = () => {
                       key={irnogAgenda.presentationTitle}
                       className="hover:bg-orange-100/10 transition duration-150 ease-in-out text-center"
                     >
-                      <td className="whitespace-nowrap p-3 border-t border-gray-200 max-w-24 truncate">
+                      <td className="whitespace-nowrap p-3 border-t border-gray-200 max-w-24 truncate pr-16 md:pr-0">
                         {irnogAgenda.presenter}
                       </td>
                       <td className="whitespace-nowrap p-3 border-t max-w-40 border-gray-200 truncate">
@@ -105,7 +105,7 @@ const IrnogPage: FC = () => {
                           }
                           className="text-white hover:text-secondary cursor-pointer"
                         >
-                          مشاهده مستندات
+                          مشاهده
                         </span>
                       </td>
                       {irnogAgenda.presentationFile && (
