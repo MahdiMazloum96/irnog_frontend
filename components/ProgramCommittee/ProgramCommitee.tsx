@@ -11,13 +11,13 @@ const ProgramCommittee: FC = () => {
   };
   return (
     <Card className="  flex flex-col mx-auto items-center w-3/4 h-full bg-secondary my-10 overflow-hidden mt-36">
-      <h1 className="uppercase text-center text-white  text-4xl lg:text-6xl pt-16 select-none leading-relaxed">
-        Program Committee
+      <h1 className="uppercase text-center text-white  text-2xl lg:text-6xl pt-16 select-none leading-relaxed">
+        اعضای کمیته برنامه ریزی مرکزی ایرناگ
       </h1>
       <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-4 mx-8 my-16">
         {programCommitteeMembers.map((member, index) => {
           return (
-            <div className="bg-gray-900 rounded-2xl" key={index}>
+            <div className="bg-gray-900 rounded-2xl" key={member.linkdin}>
               <Image
                 width="600"
                 height="600"

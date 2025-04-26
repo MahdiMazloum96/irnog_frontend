@@ -10,6 +10,7 @@ export interface Table {
   presentationTitle: string;
   presentationTime?: string;
   presentationLink?: string;
+  presentationFile?: string;
 }
 
 export interface SponsorInfo {
@@ -42,7 +43,7 @@ export interface IrnogEvent {
   time?: string;
   location: Location;
   irnogAgenda?: Table[];
-  sponsers: Sponsors;
+  sponsers?: Sponsors;
   gallery?: gallery[];
-  Participants: Participants[];
+  Participants?: Participants[];
 }

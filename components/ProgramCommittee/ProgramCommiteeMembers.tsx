@@ -37,7 +37,7 @@ export const programCommitteeMembers: programCommitteeMembersProps[] = [
   },
   {
     name: "وحید شهبازیان",
-    image: "/pics/SaeedSozangar.jpg",
+    image: "/pics/shahbazian.jpeg",
     linkdin: "https://www.linkedin.com/in/vahid-shahbazian-fard-jahromy/",
   },
   {
@@ -48,7 +48,7 @@ export const programCommitteeMembers: programCommitteeMembersProps[] = [
   {
     name: "مریم آل‌طاها",
     image: "/pics/MaryamAltaha.jpg",
-    linkdin: "https://www.linkedin.com/in/mortezasoltani/",
+    linkdin: "https://www.linkedin.com/in/maryam-aletaha/?originalSubdomain=ir",
   },
   {
     name: "بهنام یزدانی",
