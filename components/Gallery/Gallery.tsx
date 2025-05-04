@@ -1,5 +1,7 @@
 import { FC } from "react";
 import { GalleryPictures } from "./GalleryPictures";
+import Image from "next/image";
+import defaultImage from "../../public/pics/defaultIMage/default.png";
 interface GalleryProps {}
 const Gallery: FC<GalleryProps> = () => {
   return (
@@ -11,7 +13,13 @@ const Gallery: FC<GalleryProps> = () => {
         {GalleryPictures.map((pic, index) => {
           return (
             <div key={index}>
-              <img src={pic.picture} alt="pic" className="rounded-lg" />
+              <Image
+                src={pic.picture || defaultImage}
+                alt="pic"
+                width={400}
+                height={400}
+                className="rounded-lg"
+              />
             </div>
           );
         })}

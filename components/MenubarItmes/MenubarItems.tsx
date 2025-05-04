@@ -62,7 +62,7 @@ const MenubarItems: FC<MenubarItemsProps> = ({ setOpen }) => {
                         {item.name}
                       </div>
                     </DropdownMenuTrigger>
-                    <DropdownMenuContent className="w-40 bg-secondary border border-white rounded-lg shadow-lg">
+                    <DropdownMenuContent className="w-40 bg-secondary border border-white rounded-lg shadow-lg mr-20 ">
                       <div>
                         {eventItemsArray.map((item, index) => (
                           <div

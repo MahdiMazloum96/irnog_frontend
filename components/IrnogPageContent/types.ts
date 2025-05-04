@@ -10,6 +10,7 @@ export interface Table {
   presentationTitle: string;
   presentationTime?: string;
   presentationLink?: string;
+  presentationFile?: string;
 }
 
 export interface SponsorInfo {

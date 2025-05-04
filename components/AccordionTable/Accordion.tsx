@@ -42,7 +42,7 @@ const AccordionTable: FC<AccordionTableProps> = ({ Participants }) => {
               }`}
             >
               <div className="p-6" dir="rtl">
-                <div className="overflow-x-auto">
+                <div className="overflow-x-auto no-scrollbar">
                   {" "}
                   <table className="w-full min-w-max mx-2 backdrop-blur-sm bg-gradient-to-r from-orange-400/40 to-orange-600/40 shadow-md rounded-lg overflow-hidden">
                     <thead className="bg-amber-700 text-white">

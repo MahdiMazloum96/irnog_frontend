@@ -16,6 +16,16 @@
     }
   }
 }
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
 .shinyButton {
   @apply bg-transparent backdrop-blur-lg border-gray-300  uppercase hover:shadow-[0_4px_6px_rgba(255,255,255,0.5)]  inline-flex  animate-shimmer border bg-[linear-gradient(110deg,#ff8c00,45%,#ffb347,55%,#ff8c00)] bg-[length:200%_100%]  font-medium  transition-colors;
 }

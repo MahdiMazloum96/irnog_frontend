@@ -48,7 +48,7 @@ export const programCommitteeMembers: programCommitteeMembersProps[] = [
   {
     name: "مریم آل‌طاها",
     image: "/pics/MaryamAltaha.jpg",
-    linkdin: "https://www.linkedin.com/in/mortezasoltani/",
+    linkdin: "https://www.linkedin.com/in/maryam-aletaha/?originalSubdomain=ir",
   },
   {
     name: "بهنام یزدانی",
