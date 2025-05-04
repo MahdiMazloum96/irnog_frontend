@@ -3,7 +3,9 @@
 Welcome to the IRNOG Website project! 🚀 This is a **Next.js** application designed to power the official website for IRNOG, providing information, updates, and resources for the IRNOG community.
 
 ## 🌐 About the Project
-IRNOG (Polish Network Operators' Group) is a community-driven initiative that brings together networking professionals and enthusiasts. This website serves as the central hub for:
+
+IRNOG  is a community-driven initiative that brings together networking professionals and enthusiasts. This website serves as the central hub for:
+
 - Event announcements and schedules
 - Blog posts and technical articles
 - Community discussions
