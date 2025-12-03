@@ -14,7 +14,7 @@ const MainPage: React.FC = () => {
       <ContentCard />
       <ProgramCommittee />
       {/* <Ticket /> */}
-      <News />
+      {/* <News /> */}
       <Gallery />
       <ContactUs />
     </div>

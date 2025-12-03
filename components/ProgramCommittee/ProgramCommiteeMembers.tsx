@@ -5,20 +5,15 @@ interface programCommitteeMembersProps {
 }
 export const programCommitteeMembers: programCommitteeMembersProps[] = [
   {
-    name: "میلاد افشاری",
-    image: "/pics/miladAfshari.jpg",
-    linkdin: "https://www.linkedin.com/in/miladafshari/",
-  },
-  {
     name: "سید پوریا موسوی زاده تهرانی",
     image: "/pics/poriaMosaviZade.jpg",
     linkdin: "https://www.linkedin.com/in/spmzt/",
   },
 
   {
-    name: "ابراهیم کشیزاده",
-    image: "/pics/EbrahimKeshizadeh.jpeg",
-    linkdin: "https://www.linkedin.com/in/ebrahimkeshizadeh/",
+    name: "آیسان نظرمحمدی",
+    image: "/pics/aysan.jpg",
+    linkdin: "https://www.linkedin.com/in/aysan-nazarmohammadi-0b72b51a6",
   },
   {
     name: "محمّد مظفری",
@@ -36,6 +31,11 @@ export const programCommitteeMembers: programCommitteeMembersProps[] = [
     linkdin: "https://www.linkedin.com/in/souzangar/?originalSubdomain=ir",
   },
   {
+    name: "میلاد افشاری",
+    image: "/pics/miladAfshari.jpg",
+    linkdin: "https://www.linkedin.com/in/miladafshari/",
+  },
+  {
     name: "وحید شهبازیان",
     image: "/pics/shahbazian.jpeg",
     linkdin: "https://www.linkedin.com/in/vahid-shahbazian-fard-jahromy/",
@@ -46,7 +46,7 @@ export const programCommitteeMembers: programCommitteeMembersProps[] = [
     linkdin: "https://www.linkedin.com/in/mortezasoltani/",
   },
   {
-    name: "مریم آل‌طاها",
+    name: "مریم آل‌طاهه",
     image: "/pics/MaryamAltaha.jpg",
     linkdin: "https://www.linkedin.com/in/maryam-aletaha/?originalSubdomain=ir",
   },
@@ -56,7 +56,7 @@ export const programCommitteeMembers: programCommitteeMembersProps[] = [
     linkdin: "https://www.linkedin.com/in/behnamyazdani/",
   },
   {
-    name: "شهاب وحّاب زاده",
+    name: "شهاب وحاب زاده",
     image: "/pics/shahabVahabzade.jpeg",
     linkdin: "https://www.linkedin.com/in/vahabzadeh/",
   },

@@ -18,7 +18,7 @@ export default function StickyHeader() {
   return (
     <header
       className={`sticky top-0 p-4 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-gray-900 dark:bg-gray-900 shadow-md" : "bg-transparent"
+        isScrolled ? "bg-Tertiary shadow-md" : "bg-transparent"
       }`}
     >
       <div className="flex justify-between items-center">
@@ -28,7 +28,7 @@ export default function StickyHeader() {
             alt="Logo"
             width={100}
             height={80}
-            className="bg-secondary rounded-full p-2 lg:ml-28 ml-5 "
+            className="bg-white rounded-full p-2 lg:ml-28 ml-5 "
           />
         </div>
         <div>

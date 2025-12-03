@@ -5,13 +5,16 @@ interface ContentCardProps {}
 
 const ContentCard: React.FC<ContentCardProps> = () => {
   return (
-    <Card className="text-white w-5/6 lg:w-4/6 align-middle m-auto  backdrop-blur-sm bg-gradient-to-r from-orange-400/40 to-orange-600/40 border border-white/20 shadow-lg my-8">
+    <Card className="text-white w-5/6 lg:w-4/6 align-middle m-auto  backdrop-blur-sm bg-gradient-to-r from-primary/40 to-secondary/40 border border-white/20 shadow-lg my-8">
       <CardHeader className="flex justify-center items-center text-center pt-4 select-none ">
         <CardTitle className="leading-relaxed">
           گروه گردانندگان شبکه اینترنت ایران
         </CardTitle>
       </CardHeader>
-      <CardContent className="flex justify-start lg:text-base/10 text-right select-none  text-sm">
+      <CardContent
+        className="flex justify-start lg:text-base/10 select-none text-sm text-justify"
+        dir="rtl"
+      >
         گردانندگان شبکه اینترنت ایران یک گروه تخصصی با سازوکار شفاف و مبتنی بر
         جذب حداکثری تمام ذینفعان می‌باشد. هدف گروه گردانندگان شبکه اینترنت
         ایران، ارائه پیشنهادات کارشناسانه برای بهبود شرایط استفاده از اینترنت
