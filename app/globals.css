@@ -3,8 +3,9 @@
 @plugin "tailwindcss-animate";
 
 @theme {
-  --color-primary: oklch(0.145 0 0);
-  --color-secondary: oklch(0.705 0.213 47.604);
+  --color-primary: oklch(0.3427 0.056 241.38);
+  --color-secondary: oklch(0.9158 0 0);
+  --color-Tertiary: oklch(0.4014 0.0685 242.8);
 
   --animate-shimmer: shimmer 2s linear infinite;
   @keyframes shimmer {
@@ -27,7 +28,7 @@
 }
 
 .shinyButton {
-  @apply bg-transparent backdrop-blur-lg border-gray-300  uppercase hover:shadow-[0_4px_6px_rgba(255,255,255,0.5)]  inline-flex  animate-shimmer border bg-[linear-gradient(110deg,#ff8c00,45%,#ffb347,55%,#ff8c00)] bg-[length:200%_100%]  font-medium  transition-colors;
+  @apply bg-transparent backdrop-blur-lg border-gray-300  uppercase hover:shadow-[0_4px_6px_rgba(255,255,255,0.5)]  inline-flex  animate-shimmer border bg-[linear-gradient(110deg,#26364f,45%,#677284,55%,#26364f)] bg-[length:200%_100%]  font-medium  transition-colors;
 }
 
 @font-face {
@@ -44,11 +45,15 @@
   font-family: "Sahel";
   src: url("/fonts/Sahel.ttf") format("truetype");
 }
-
+@font-face {
+  font-family: "Rust";
+  src: url("/fonts/NexaRustSlab-BlackShadow01.otf") format("truetype");
+}
 @theme {
   --font-IranSans: "IranSanse";
   --font-Soraya: "Soraya";
   --font-Sahel: "Sahel";
+  --font-Rust: "Rust";
 }
 
 body {

@@ -55,10 +55,10 @@ const AnimatedWallpaper = () => {
       },
       particles: {
         color: {
-          value: "#ff5d17",
+          value: "#234C6A",
         },
         links: {
-          color: "#ff5d17",
+          color: "#234C6A",
           distance: 200,
           enable: true,
           opacity: 0.9,
